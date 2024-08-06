@@ -13,3 +13,21 @@ First, we will showcase its automation capabilities in countering an advanced ph
 Secondly, we will demonstrate how SOARCA executes a CACAO playbook to remediate malware-infected assets within an organisation. This highlights how CACAO and SOARCA can not only enhance investigative capabilities and recovery time, but also fully automate security procedures. This helps in greatly enhancing the efficiency of recurrent security operations within organisations.
 
 Furthermore, we will delve into the inner workings of our platform, illustrating how the orchestration and automation capabilities of SOARCA can be tailored to meet specific requirements using our SOARCA Fin library , enabling creation of custom functionalities in Python to effectively address unique security challenges.
+
+
+== Code Explanation
+
+
+We build a lab environment utilising https://www.proxmox.com/en/[Proxmox] as depicted in the figure below (to be added). For easil
+
+
+
+== Project Tree
+
+```bash
+.
+├── README.adoc
+└── code
+    ├── packer #packer templates 
+    └── terraform #terraform templates
+```
