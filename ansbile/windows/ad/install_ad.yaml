@@ -1,0 +1,7 @@
+---
+- name: Install Windows AD
+  hosts: ad_windows
+  gather_facts: no
+
+  roles:
+    - role: domainservices

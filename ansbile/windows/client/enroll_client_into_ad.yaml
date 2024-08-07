@@ -1,0 +1,49 @@
+---
+- name: Enroll client to AD
+  hosts: clients_windows:server_windows
+  gather_facts: no
+  vars:
+    - tld: "local"          # Only the extention so .nl would be nl, local is fine in most cases
+    - domain: "tnoproject"  # The domain you want, you don't need to own any domain names for this$
+    - baseOu: "testproject" # The project OU all users and resourses will be put into this OU.
+    - default_password: "TNO_default_password12" # Default password for all users.
+
+
+  tasks:
+    - name: Set DNS server
+      ansible.windows.win_powershell:
+          script: Set-DnsClientServerAddress -InterfaceAlias "Ethernet*" -ServerAddresses ( "{{ item }}" )
+      with_inventory_hostnames:
+        - ad_windows
+      tags: ['enroll']
+
+    - microsoft.ad.membership:
+        dns_domain_name: "{{ domain }}.{{ tld }}"
+        domain_admin_user: "{{domain|upper}}\\tnoadmin"
+        domain_admin_password: "{{default_password}}"
+        domain_ou_path: "OU=Computers,OU={{baseOu}},DC={{domain}},DC={{tld}}"
+        state: domain
+        reboot: true
+
+    # - name: Copy scripts for installation to AD server
+    #   win_copy:
+    #       src: "{{playbook_dir}}/../scripts"
+    #       dest: 'C:\temp\'
+    #       remote_src: no
+
+    # - name: Execute Enrollment command
+    #   ansible.windows.win_powershell:
+    #       chdir: 'C:\temp\scripts'
+    #       script: |
+    #         C:\temp\scripts\enroll_client.ps1
+
+
+    # - name: Remove temp directory
+    #   ansible.windows.win_file:
+    #     path: C:\temp
+    #     state: absent
+
+    # - name: Reboot
+    #   win_reboot:
+    #     msg: "Reboot automatically"     
+

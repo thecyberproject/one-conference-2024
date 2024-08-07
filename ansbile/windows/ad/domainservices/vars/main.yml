@@ -1,0 +1,28 @@
+---
+domain_ou:
+  - Groups
+  - Computers
+  - Users
+  - Servers
+  - Admins
+
+domain_group:
+  - name: DomainAdminsTNO
+    display_name: 'Domain Administrators TNO'
+  - name: TNOrw
+    display_name: 'TNO File share group read/ write'
+  
+
+default_users:
+  - Alan Turing
+  - Jonh von Neumann
+  - Oskar Morgenstern
+  - Edward Teller
+  - Marina Von Neumann
+  - Albert Einstein
+  - Isaac Newton
+  - Stephen Hawking
+
+default_admins:
+  - admin.project
+  - admin.cstlab

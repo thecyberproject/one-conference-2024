@@ -1,0 +1,84 @@
+---
+  - name: Wait 300 seconds for the connection to come up
+    ansible.builtin.wait_for_connection:
+      timeout: 300
+
+  - name: Ensure OU is present 
+    microsoft.ad.ou:
+      name: testproject
+      path: DC=tnoproject,DC=local
+      state: present
+
+  - name: Ensure OUs is present 
+    microsoft.ad.ou:
+      name: "{{item}}"
+      path: "OU={{baseOu}},DC={{domain}},DC={{tld}}"
+      state: present
+    loop: "{{domain_ou}}"
+
+  - name: Create a group in a custom path
+    microsoft.ad.group:
+      name: "{{item.name}}"
+      display_name: "{{item.display_name}}"
+      scope: global
+      path: "OU=Groups,OU={{baseOu}},DC={{domain}},DC={{tld}}"
+      state: present
+    loop: "{{domain_group}}"
+
+  - name: Create default users
+    microsoft.ad.user:
+      name: "{{item | replace(' ', '.') | lower}}"
+      display_name: "{{item}}"
+      path: "OU=Users,OU={{baseOu}},DC={{domain}},DC={{tld}}"
+      state: present
+      password: "{{default_password}}"
+      password_never_expires: true
+      groups:
+        add:
+        - TNOrw
+    loop: "{{default_users}}"
+    when: ad_users | length == 0
+
+  - name: Create custom users
+    microsoft.ad.user:
+      name: "{{item | replace(' ', '.')}}"
+      display_name: "{{item}}"
+      path: "OU=Users,OU={{baseOu}},DC={{domain}},DC={{tld}}"
+      state: present
+      password: "{{default_password}}"
+      password_never_expires: true
+      groups:
+        add:
+        - TNOrw
+    loop: "{{ad_users}}"
+    when: ad_users | length > 0
+
+  - name: Add admin users
+    microsoft.ad.user:
+      name: "{{item | replace(' ', '.')}}"
+      display_name: "{{item}}"
+      path: "OU=Users,OU={{baseOu}},DC={{domain}},DC={{tld}}"
+      state: present
+      password: "{{default_password}}"
+      password_never_expires: true
+      groups:
+        add:
+        - TNOrw
+        - DomainAdminsTNO
+    loop: "{{default_admins}}"
+
+  - name: Add admin group to Domain Admins
+    microsoft.ad.group:
+      name: Domain Admins
+      scope: global
+      members:
+        add:
+        - DomainAdminsTNO
+
+  - name: Add admin group to Enterprise Admins
+    microsoft.ad.group:
+      name: Enterprise Admins
+      scope: universal
+      members:
+        add:
+        - DomainAdminsTNO
