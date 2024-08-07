@@ -242,3 +242,12 @@ resource "null_resource" "wazuh_install" {
     command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/wazuh/v4_8_1/playbooks/wazuh-single-secure.yml -i ../../ansible/hosts.ini -vvv"
   }
 }
+
+resource "null_resource" "wazuh_enroll_windows" {
+  depends_on = [
+    null_resource.wazuh_install
+  ]
+  provisioner "local-exec" {
+    command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/wazuh/v4_8_1/playbooks/wazuh-agent.yml -i ../../ansible/hosts.ini -vvv"
+  }
+}

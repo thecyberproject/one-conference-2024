@@ -1,7 +1,5 @@
 ---
 - hosts: ad_windows:clients_windows
-  become: yes
-  become_user: root
   roles:
     - ../roles/wazuh/ansible-wazuh-agent
   vars:
