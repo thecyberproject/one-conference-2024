@@ -203,9 +203,11 @@ resource "local_file" "hosts_cfg" {
   ]
   content = templatefile("${path.module}/templates/host.tpl",
     {
-      ads     = module.ad[*].ipv4_address
-      clients = module.client[*].ipv4_address
-      wazuh   = module.wazuh[*].ipv4_address
+      ads      = module.ad[*].ipv4_address
+      clients  = module.client[*].ipv4_address
+      wazuh    = module.wazuh[*].ipv4_address
+      soarca   = module.soarca[*].ipv4_address
+      attackvm = module.attackvm[*].ipv4_address
     }
   )
   filename = "../../ansible/hosts.ini"
