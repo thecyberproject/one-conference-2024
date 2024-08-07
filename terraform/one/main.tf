@@ -1,11 +1,58 @@
+module "wazuh" {
+  count               = 1
+  source              = "../base-spec-cloudinit"
+  vm_name             = "ONEC-Wazuh"
+  vm_description      = "Wazuh for the one-conference"
+  vm_id               = 1302
+  template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
+  template_full_clone = true
+  admin_username      = "ansible"
+  admin_password      = "vErYSecureOneConf"
+  ssh_empty           = false
+
+  default_ci_cdrom_storage = var.proxmox_storage
+
+  proxmox_node           = "csthv04"
+  primary_network_bridge = "vlan131"
+
+  networks = [
+    {
+      bridge = "vlan131"
+    },
+  ]
+
+  primary_network_cidr_address = "192.168.1.230/24"
+  primary_network_gateway      = "192.168.1.1"
+
+  cores  = 4
+  memory = 4096
+
+  disks = [
+    {
+      virtio0 = {
+        storage = var.proxmox_storage
+        size    = 30
+        format  = "raw"
+      }
+    }
+  ]
+
+  tags = [
+    "wazuh",
+    "ONE-Conference",
+  ]
+}
+
+
+
 module "ad" {
   count = 1
 
   source         = "../windows-base"
   vm_name        = "ONEC-Windows-Server-2019-AD"
   vm_description = "Windows AD Server"
-  #   proxmox_resource_pool  = "V2412"
-  vm_id                  = 630
+
+  vm_id                  = 1303
   template_clone         = "Windows-Server-2019-ga-template-csthv04"
   template_full_clone    = true
   proxmox_node           = var.proxmox_node
@@ -19,7 +66,7 @@ module "ad" {
   disks = [
     {
       virtio0 = {
-        storage = "nvme"
+        storage = var.proxmox_storage
         size    = 50
         format  = "raw"
       }
@@ -34,8 +81,8 @@ module "client" {
   source         = "../windows-base"
   vm_name        = format("ONEC-Windows-10-%03d", count.index + 1)
   vm_description = "ONEC-Windows netwerk server"
-  #   proxmox_resource_pool  = "V2412"
-  vm_id                  = 640 + count.index + 1
+
+  vm_id                  = 1304 + count.index + 1
   template_clone         = "Windows-10-22H2-ga-template-csthv04"
   template_full_clone    = true
   proxmox_node           = var.proxmox_node
@@ -49,7 +96,7 @@ module "client" {
   disks = [
     {
       virtio0 = {
-        storage = "nvme"
+        storage = var.proxmox_storage
         size    = 50
         format  = "raw"
       }
@@ -58,22 +105,21 @@ module "client" {
 
 }
 
-
-
 resource "local_file" "hosts_cfg" {
   depends_on = [
     module.ad,
-    module.client
+    module.client,
+    module.wazuh
   ]
   content = templatefile("${path.module}/templates/host.tpl",
     {
       ads     = module.ad[*].ipv4_address
       clients = module.client[*].ipv4_address
+      wazuh   = module.wazuh[*].ipv4_address
     }
   )
   filename = "../../ansible/hosts.ini"
 }
-
 
 resource "null_resource" "install" {
   depends_on = [
@@ -94,5 +140,15 @@ resource "null_resource" "enroll" {
   ]
   provisioner "local-exec" {
     command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/windows/client/enroll_client_into_ad.yaml -i ../../ansible/hosts.ini -vvv"
+  }
+}
+
+resource "null_resource" "wazuh_install" {
+  depends_on = [
+    module.wazuh,
+    null_resource.enroll
+  ]
+  provisioner "local-exec" {
+    command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/wazuh/v4_8_1/playbooks/wazuh-single-secure.yml -i ../../ansible/hosts.ini -vvv"
   }
 }

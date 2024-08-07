@@ -27,3 +27,12 @@ variable "proxmox_node" {
   default     = "csthv04"
 }
 
+variable "proxmox_storage" {
+  type        = string
+  description = "The promox storage for the host vm"
+  default     = "nvme"
+}
+
+
+
+
