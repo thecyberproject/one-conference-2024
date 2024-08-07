@@ -15,6 +15,15 @@ ${ip}
 ${ip}
 %{ endfor ~}
 
+[soarca]
+%{ for ip in soarca ~}
+${ip}
+%{ endfor ~}
+
+[attackvm]
+%{ for ip in attackvm ~}
+${ip}
+%{ endfor ~}
 
 [all:vars]
 ansible_connection=ssh
