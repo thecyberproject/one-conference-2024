@@ -244,3 +244,16 @@ resource "null_resource" "wazuh_install" {
     command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/wazuh/v4_8_1/playbooks/wazuh-single-secure.yml -i ../../ansible/hosts.ini -vvv"
   }
 }
+
+resource "null_resource" "soarca_install" {
+  depends_on = [
+    module.soarca,
+    null_resource.enroll
+  ]
+  provisioner "local-exec" {
+    command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/docker/install_docker.yaml -i ../../ansible/hosts.ini -vvv"
+  }
+}
+
+
+
