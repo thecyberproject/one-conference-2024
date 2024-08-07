@@ -51,7 +51,7 @@
           password: WKp%sZMoJVhF%2Mn2kaj^qmb9*b6@Kb%
       wazuh_manager_integrations:
         - name: custom-soarca
-          hook_url: 'http://192.168.130.30:8080'
+          hook_url: 'http://192.168.1.231:8080'
           alert_format: 'json'
           rule_id: 554
 
