@@ -1,18 +1,18 @@
 module "wazuh" {
-  count  = 1
-  source = "../base-spec-cloudinit"
-  vm_name        = "ONEC-Wazuh"
-  vm_description = "Wazuh for the one-conference"
+  count               = 1
+  source              = "../base-spec-cloudinit"
+  vm_name             = "ONEC-Wazuh"
+  vm_description      = "Wazuh for the one-conference"
   vm_id               = 1302
   template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
   template_full_clone = true
-  admin_username = "ansible"
-  admin_password = "vErYSecureOneConf"
-  ssh_empty      = false
+  admin_username      = "ansible"
+  admin_password      = "vErYSecureOneConf"
+  ssh_empty           = false
 
   default_ci_cdrom_storage = var.proxmox_storage
 
-  proxmox_node = "csthv04"
+  proxmox_node           = "csthv04"
   primary_network_bridge = "vlan131"
 
   networks = [
@@ -114,6 +114,7 @@ resource "local_file" "hosts_cfg" {
     {
       ads     = module.ad[*].ipv4_address
       clients = module.client[*].ipv4_address
+      wazuh   = module.wazuh[*].ipv4_address
     }
   )
   filename = "../../ansible/hosts.ini"
@@ -138,5 +139,15 @@ resource "null_resource" "enroll" {
   ]
   provisioner "local-exec" {
     command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/windows/client/enroll_client_into_ad.yaml -i ../../ansible/hosts.ini -vvv"
+  }
+}
+
+resource "null_resource" "wazuh_install" {
+  depends_on = [
+    module.wazuh,
+    null_resource.enroll
+  ]
+  provisioner "local-exec" {
+    command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/wazuh/v4_8_1/playbooks/wazuh-single-secure.yml -i ../../ansible/hosts.ini -vvv"
   }
 }

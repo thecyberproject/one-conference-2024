@@ -9,6 +9,13 @@ ${ip}
 ${ip}
 %{ endfor ~}
 
+
+[aio]
+%{ for ip in wazuh ~}
+${ip}
+%{ endfor ~}
+
+
 [all:vars]
 ansible_connection=ssh
 ansible_ssh_user=ansible
