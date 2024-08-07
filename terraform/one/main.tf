@@ -4,7 +4,7 @@ module "ad" {
   source         = "../windows-base"
   vm_name        = "ONEC-Windows-Server-2019-AD"
   vm_description = "Windows AD Server"
-  #   proxmox_resource_pool  = "V2412"
+
   vm_id                  = 630
   template_clone         = "Windows-Server-2019-ga-template-csthv04"
   template_full_clone    = true
@@ -34,7 +34,7 @@ module "client" {
   source         = "../windows-base"
   vm_name        = format("ONEC-Windows-10-%03d", count.index + 1)
   vm_description = "ONEC-Windows netwerk server"
-  #   proxmox_resource_pool  = "V2412"
+
   vm_id                  = 640 + count.index + 1
   template_clone         = "Windows-10-22H2-ga-template-csthv04"
   template_full_clone    = true
@@ -58,8 +58,6 @@ module "client" {
 
 }
 
-
-
 resource "local_file" "hosts_cfg" {
   depends_on = [
     module.ad,
@@ -73,7 +71,6 @@ resource "local_file" "hosts_cfg" {
   )
   filename = "../../ansible/hosts.ini"
 }
-
 
 resource "null_resource" "install" {
   depends_on = [
