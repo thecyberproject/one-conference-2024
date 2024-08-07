@@ -253,3 +253,16 @@ resource "null_resource" "wazuh_enroll_windows" {
     command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/wazuh/v4_8_1/playbooks/wazuh-agent.yml -i ../../ansible/hosts.ini -vvv"
   }
 }
+
+resource "null_resource" "soarca_install" {
+  depends_on = [
+    module.soarca,
+    null_resource.enroll
+  ]
+  provisioner "local-exec" {
+    command = "export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook ../../ansible/docker/install_docker.yaml -i ../../ansible/hosts.ini -vvv"
+  }
+}
+
+
+
