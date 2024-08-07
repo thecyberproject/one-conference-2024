@@ -1,9 +1,99 @@
+module "soarca" {
+  count               = 1
+  source              = "../base-spec-cloudinit"
+  vm_name             = "ONEC-Soarca"
+  vm_description      = "Soarca for the one-conference"
+  vm_id               = 1302
+  template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
+  template_full_clone = true
+  admin_username      = "ansible"
+  admin_password      = "vErYSecureOneConf"
+  ssh_empty           = false
+
+  default_ci_cdrom_storage = var.proxmox_storage
+
+  proxmox_node           = "csthv04"
+  primary_network_bridge = "vlan131"
+
+  networks = [
+    {
+      bridge = "vlan131"
+    },
+  ]
+
+  primary_network_cidr_address = "192.168.1.231/24"
+  primary_network_gateway      = "192.168.1.1"
+
+  cores  = 4
+  memory = 4096
+
+  disks = [
+    {
+      virtio0 = {
+        storage = var.proxmox_storage
+        size    = 30
+        format  = "raw"
+      }
+    }
+  ]
+
+  tags = [
+    "Soarca",
+    "ONE-Conference",
+  ]
+}
+
+module "attackvm" {
+  count               = 1
+  source              = "../base-spec-cloudinit"
+  vm_name             = "Attacker"
+  vm_description      = "AttackerVM for the one-conference"
+  vm_id               = 1303
+  template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
+  template_full_clone = true
+  admin_username      = "ansible"
+  admin_password      = "vErYSecureOneConf"
+  ssh_empty           = false
+
+  default_ci_cdrom_storage = var.proxmox_storage
+
+  proxmox_node           = "csthv04"
+  primary_network_bridge = "vlan132"
+
+  networks = [
+    {
+      bridge = "vlan132"
+    },
+  ]
+
+  primary_network_cidr_address = "192.168.2.230/24"
+  primary_network_gateway      = "192.168.1.1"
+
+  cores  = 4
+  memory = 4096
+
+  disks = [
+    {
+      virtio0 = {
+        storage = var.proxmox_storage
+        size    = 30
+        format  = "raw"
+      }
+    }
+  ]
+
+  tags = [
+    "Attackvm",
+    "ONE-Conference",
+  ]
+}
+
 module "wazuh" {
   count               = 1
   source              = "../base-spec-cloudinit"
   vm_name             = "ONEC-Wazuh"
   vm_description      = "Wazuh for the one-conference"
-  vm_id               = 1302
+  vm_id               = 1304
   template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
   template_full_clone = true
   admin_username      = "ansible"
@@ -52,7 +142,7 @@ module "ad" {
   vm_name        = "ONEC-Windows-Server-2019-AD"
   vm_description = "Windows AD Server"
 
-  vm_id                  = 1303
+  vm_id                  = 1305
   template_clone         = "Windows-Server-2019-ga-template-csthv04"
   template_full_clone    = true
   proxmox_node           = var.proxmox_node
@@ -82,7 +172,7 @@ module "client" {
   vm_name        = format("ONEC-Windows-10-%03d", count.index + 1)
   vm_description = "ONEC-Windows netwerk server"
 
-  vm_id                  = 1304 + count.index + 1
+  vm_id                  = 1306 + count.index + 1
   template_clone         = "Windows-10-22H2-ga-template-csthv04"
   template_full_clone    = true
   proxmox_node           = var.proxmox_node
