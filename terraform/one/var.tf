@@ -21,24 +21,6 @@ variable "pm_tls_insecure" {
   default     = true
 }
 
-variable "stackstate_license_key" {
-  type        = string
-  description = "License key for the stackstate server"
-  sensitive   = true
-}
-
-variable "stackstate_username" {
-  type        = string
-  description = "Username for the stackstate server"
-  sensitive   = true
-}
-
-variable "stackstate_password" {
-  type        = string
-  description = "Password for the stackstate server"
-  sensitive   = true
-}
-
 variable "proxmox_node" {
   type        = string
   description = "The promox host to deploy on"
