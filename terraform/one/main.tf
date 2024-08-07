@@ -108,7 +108,8 @@ module "client" {
 resource "local_file" "hosts_cfg" {
   depends_on = [
     module.ad,
-    module.client
+    module.client,
+    module.wazuh
   ]
   content = templatefile("${path.module}/templates/host.tpl",
     {
