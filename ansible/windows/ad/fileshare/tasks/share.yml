@@ -10,7 +10,7 @@
 
 - name: Add public company share
   ansible.windows.win_share:
-    name: company
+    name: share
     description: Company share
     path: C:\share\
     list: true
