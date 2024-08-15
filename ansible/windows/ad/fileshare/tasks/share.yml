@@ -12,7 +12,7 @@
   ansible.windows.win_share:
     name: company
     description: Company share
-    path: C:\shares\
+    path: C:\share\
     list: true
     full: DomainAdminsTNO
     change: TNOrw
