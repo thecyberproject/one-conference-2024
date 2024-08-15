@@ -1,0 +1,4 @@
+---
+- name: Create file share
+  include_tasks: share.yml
+  tags: ["fileshare"]
