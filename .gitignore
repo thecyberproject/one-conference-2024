@@ -78,3 +78,6 @@ ansible/env
 plugins/*
 **/*.log
 .vscode/*
+
+**/build/*
+**/bin/*
