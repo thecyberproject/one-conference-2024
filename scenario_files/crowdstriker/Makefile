@@ -1,7 +1,7 @@
 .PHONY: dev-server dev-tailwind dev-templ dev build-server build-tailwind build-templ build launch deploy clean
 
 
-BINARY_NAME = website
+BINARY_NAME = crowdstriker
 DIRECTORY = $(sort $(dir $(wildcard ./test/*/)))
 VERSION = $(shell git describe --tags --dirty)
 BUILDTIME := $(shell  date '+%Y-%m-%dT%T%z')
