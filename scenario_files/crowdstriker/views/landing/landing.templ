@@ -1,0 +1,1223 @@
+package landing
+
+templ IndexPage() {
+
+<!DOCTYPE html>
+<html lang="en" country="us">
+
+<head>
+    <script type="text/javascript">
+        function OptanonWrapper() { }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="content-language" content="en" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <title>CrowdStrike Updater Tool</title>
+    <meta name="description" content="CrowdStrike is an industry leader in next-gen endpoint protection" />
+    <link rel="canonical" href="https://www.crowdstrike.com/free-trial-guide/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CrowdStriker Update Tool" />
+    <meta property="og:description" content="CrowdStrike is an industry leader in next-gen endpoint protection" />
+    <meta property="og:url" content="https://www.crowdstrike.com/free-trial-guide/" />
+    <meta property="og:site_name" content="crowdstrike.com" />
+    <meta property="article:publisher" content="https://www.facebook.com/CrowdStrike/" />
+    <meta property="article:modified_time" content="2024-03-13T22:43:44+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@CrowdStrike" />
+
+    <style id="classic-theme-styles-inline-css" type="text/css">
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        body .is-layout-grid>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/page-ui-components.min.css?ver=1714069455">
+    <link rel="stylesheet" type="text/css" href="css/crowdstrike-wp-header.css?ver=6.5.2">
+    <link rel="stylesheet" type="text/css" href="css/theme-styles.min.css?ver=1714069455">
+    <link rel="stylesheet" type="text/css" href="css/tablepress-combined.min.css?ver=32">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/v4-shims.css">
+    <script src="js/fetch-inject.js?ver=1714069455"></script>
+    <script src="js/crowdstrike-wp-header.js?ver=6.5.2"></script>
+    <script src="js/blog-category-sidebar.min.js?ver=1714069455"></script>
+    <link rel="shortlink" href="https://www.crowdstrike.com/?p=180835" />
+    <style type="text/css">
+        .broken_link,
+        a.broken_link {
+            text-decoration: line-through;
+        }
+    </style>
+    <link rel="icon" href="https://www.crowdstrike.com/wp-content/uploads/2024/03/cropped-favicon-32x32.png"
+        sizes="32x32" />
+    <link rel="icon" href="https://www.crowdstrike.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://www.crowdstrike.com/wp-content/uploads/2024/03/cropped-favicon-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://www.crowdstrike.com/wp-content/uploads/2024/03/cropped-favicon-270x270.png" />
+</head>
+
+<body
+    class="page-template page-template-templates page-template-ui-components page-template-templatesui-components-php page page-id-180835 lang-en">
+
+    <div data-id="wistia_player_embed"></div>
+    <div id="modal-mask" class="modal_insert_location">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="modal-inner-mask" class="modal_mask">
+                        <div class="close_button"><i data-id="modal-close" class="fa fa-close"></i></div>
+                        <div class="modal-insert-wrapper">
+                            <div id="modal-title" class="modalHeaderTitle"></div>
+                            <div id="modal-insert" class="modal_content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header
+        class="header_ui_components style_light open_left_style make_always_sticky_free_trial_&#8211;_main-_11/14/23">
+        <div data-selector="promoInsert" data-id="mainPromoBar"></div>
+        <div data-selector="promoInsert" data-id="secondaryPromoBar"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="header_logo">
+                        <a class="logo-micro" href="/">
+                            <svg width="173px" height="32px" viewBox="0 0 173 32" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Home" transform="translate(-72.000000, -7240.000000)" fill="#FEFEFE">
+                                        <g id="Group-24" transform="translate(72.000000, 7240.000000)">
+                                            <g id="Group-7" transform="translate(13.000000, 3.526700)">
+                                                <path
+                                                    d="M14.5154,12.2448 L14.5154,11.9378 L11.9154,9.6998 L11.6124,9.6998 C10.8974,10.4898 9.7934,11.0818 8.5584,11.0818 C6.6304,11.0818 5.1134,9.6118 5.1134,7.5938 C5.1134,5.5758 6.6304,4.1058 8.5584,4.1058 C9.7934,4.1058 10.8974,4.6978 11.6124,5.4878 L11.9154,5.4878 L14.5154,3.2498 L14.5154,2.9428 C13.1504,1.2758 11.0064,0.2008 8.5794,0.2008 C4.1174,0.2008 0.7384,3.3598 0.7384,7.5938 C0.7384,7.7578 0.7754,7.9088 0.7864,8.0698 C2.6124,9.3118 4.2244,10.3058 5.6124,11.2158 C7.6134,12.4818 9.2284,13.6468 10.5584,14.7298 C12.2164,14.3108 13.5604,13.4018 14.5154,12.2448 M2.3674,12.1658 C3.4094,13.4458 4.8804,14.3638 6.6154,14.7558 C5.4434,14.0968 4.3084,13.4498 3.2514,12.7338 C2.9414,12.5418 2.6654,12.3558 2.3674,12.1658"
+                                                    id="Fill-1"></path>
+                                                <path
+                                                    d="M29.571,14.0437 L28.921,11.2357 L28.683,11.0817 C28.553,11.1477 28.445,11.2357 28.12,11.2357 C27.621,11.2357 27.318,10.7087 27.058,10.2927 C26.625,9.6337 26.278,9.2827 25.975,9.1297 C27.556,8.4277 28.618,7.1117 28.618,5.2247 C28.618,2.3067 26.625,0.4637 22.921,0.4637 L16.465,0.4637 L16.465,14.7237 L20.754,14.7237 L20.754,9.7217 L21.144,9.7217 C22.097,9.7217 23.311,11.7837 23.874,12.7057 C25.044,14.5707 25.975,14.9867 27.643,14.9867 C28.423,14.9867 29.073,14.7017 29.463,14.3507 L29.571,14.0437 Z M24.242,5.4657 C24.242,6.4097 23.549,6.8697 22.747,6.8697 L20.754,6.8697 L20.754,3.9737 L22.747,3.9737 C23.549,3.9737 24.242,4.5007 24.242,5.4657 L24.242,5.4657 Z"
+                                                    id="Fill-3"></path>
+                                                <path
+                                                    d="M46.1426,7.5939 C46.1426,3.3599 42.7636,0.2009 38.2796,0.2009 C33.7946,0.2009 30.4156,3.3599 30.4156,7.5939 C30.4156,11.8279 33.7946,14.9869 38.2796,14.9869 C42.7636,14.9869 46.1426,11.8059 46.1426,7.5939 M41.7666,7.5939 C41.7666,9.6339 40.2066,11.0819 38.2796,11.0819 C36.3516,11.0819 34.7916,9.6339 34.7916,7.5939 C34.7916,5.5539 36.3516,4.1059 38.2796,4.1059 C40.2066,4.1059 41.7666,5.5539 41.7666,7.5939"
+                                                    id="Fill-5"></path>
+                                            </g>
+                                            <polygon id="Fill-8"
+                                                points="80.6103 3.9906 76.5163 3.9906 73.9813 11.8886 71.2953 3.9906 68.6963 3.9906 66.0313 11.8446 63.4973 3.9906 59.4023 3.9906 59.2073 4.3196 64.4503 18.2506 67.0493 18.2506 69.9953 10.4846 72.9633 18.2506 75.5633 18.2506 80.8053 4.3196">
+                                            </polygon>
+                                            <path
+                                                d="M96.5105,11.0987 C96.5105,6.8427 93.6725,3.9907 89.0585,3.9907 L82.4945,3.9907 L82.4945,18.2507 L89.0585,18.2507 C93.6725,18.2507 96.5105,15.3987 96.5105,11.0987 M92.1345,11.1207 C92.1345,13.4457 90.7695,14.7407 88.8855,14.7407 L86.7835,14.7407 L86.7835,7.5007 L88.8855,7.5007 C90.7695,7.5007 92.1345,8.7957 92.1345,11.1207"
+                                                id="Fill-9"></path>
+                                            <polygon id="Fill-11"
+                                                points="119.2316 7.5008 123.5206 7.5008 123.5206 3.9908 110.6536 3.9908 110.6536 7.5008 114.9426 7.5008 114.9426 18.2508 119.2316 18.2508">
+                                            </polygon>
+                                            <path
+                                                d="M137.233,8.7513 C137.233,5.8333 135.24,3.9903 131.536,3.9903 L125.08,3.9903 L125.08,18.2503 L129.37,18.2503 L129.37,13.2483 L130.388,13.2483 L133.052,18.2503 L137.32,18.2503 L137.515,17.9213 L134.655,12.6343 C136.193,11.9103 137.233,10.6163 137.233,8.7513 M132.857,8.9923 C132.857,9.9363 132.164,10.3963 131.362,10.3963 L129.37,10.3963 L129.37,7.5003 L131.362,7.5003 C132.164,7.5003 132.857,8.0273 132.857,8.9923"
+                                                id="Fill-12"></path>
+                                            <polygon id="Fill-14"
+                                                points="139.832 18.2507 144.121 18.2507 144.121 3.9907 139.832 3.9907">
+                                            </polygon>
+                                            <polygon id="Fill-15"
+                                                points="154.9957 10.3747 159.8477 4.3197 159.6527 3.9907 155.0827 3.9907 151.1177 9.0587 151.1177 3.9907 146.8287 3.9907 146.8287 18.2507 151.1177 18.2507 151.1177 13.8627 151.8977 12.9417 155.5377 18.2507 160.0217 18.2507 160.2167 17.9217">
+                                            </polygon>
+                                            <polygon id="Fill-16"
+                                                points="161.3862 3.9903 161.3862 18.2513 172.1732 18.2513 172.1732 14.7413 165.6742 14.7413 165.6742 12.7663 170.5702 12.7663 170.5702 9.4753 165.6742 9.4753 165.6742 7.5013 172.1092 7.5013 172.1092 3.9903">
+                                            </polygon>
+                                            <g id="Group-23" transform="translate(0.000000, 0.526700)">
+                                                <path
+                                                    d="M103.7658,17.8933 C106.9078,17.8933 109.6348,16.3583 109.6348,13.3983 C109.6348,10.1723 106.8858,9.3383 104.4598,8.6363 C103.5058,8.3513 102.5298,8.0213 102.5298,7.3193 C102.5298,6.8143 103.0718,6.5073 103.8958,6.5073 C105.3048,6.5073 106.4958,7.3853 107.1018,7.9563 L107.4048,7.9563 L109.4188,5.5433 L109.4188,5.2363 C108.3578,4.0303 106.1928,3.1093 103.8088,3.1093 C100.4728,3.1093 98.1568,4.9073 98.1568,7.5173 C98.1568,10.3263 100.7108,11.5553 102.8768,12.1693 C104.2858,12.5643 105.2408,12.6303 105.2408,13.3983 C105.2408,13.9473 104.5678,14.2763 103.5268,14.2763 C102.2048,14.2763 100.6028,13.4203 99.8238,12.6523 L99.5208,12.6523 L97.5288,15.1533 L97.5288,15.4603 C98.8058,16.8853 101.1008,17.8933 103.7658,17.8933"
+                                                    id="Fill-17"></path>
+                                                <path
+                                                    d="M29.8197,30.9998 C28.7807,28.6218 26.6937,25.5708 18.5177,21.2138 C14.7477,19.1178 8.3067,15.8908 2.5137,9.7578 C3.0387,11.9718 5.7287,16.8368 17.2987,22.9118 C20.5027,24.6648 25.9207,26.3088 29.8197,30.9998"
+                                                    id="Fill-19"></path>
+                                                <path
+                                                    d="M29.298,26.9271 C28.312,24.1171 26.532,20.5191 18.091,15.1751 C13.98,12.4811 7.945,9.0981 0,0.4731 C0.568,2.7981 3.078,8.8441 15.73,16.6931 C19.886,19.5091 25.25,21.2461 29.298,26.9271"
+                                                    id="Fill-21"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg> </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-9 navigationWrapper mobile_menu_links">
+                    <ul class="primaryNavigation">
+                        <li class="primaryNavigation__list-item default">
+                            <a class="primaryNavigation__list-item-link" data-click-animate="1" target="_self"
+                                href="/free-trial-guide/">Overview</a>
+                        </li>
+                        <li class="primaryNavigation__list-item default">
+                            <a class="primaryNavigation__list-item-link" data-click-animate="1" target="_self"
+                                href="/free-trial-guide/start-and-install/">Installation</a>
+                        </li>
+                        <li class="primaryNavigation__list-item default">
+                            <a class="primaryNavigation__list-item-link" data-click-animate="1" target="_self"
+                                href="/free-trial-guide/bundles-and-purchasing/">Pricing</a>
+                        </li>
+                        <li class="primaryNavigation__list-item default">
+                            <a class="primaryNavigation__list-item-link" data-click-animate="1" target="_self"
+                                href="https://www.crowdstrike.com/free-trial-guide/faq/">FAQ</a>
+                        </li>
+                        <li class="primaryNavigation__list-item button">
+                            <a class="primaryNavigation__list-item-link" data-click-animate="1" target="_self"
+                                href="https://www.crowdstrike.com/products/trials/try-falcon-prevent/">Sign up</a>
+                        </li>
+                        <li class="primaryNavigation__list-item button">
+                            <a class="primaryNavigation__list-item-link" data-click-animate="1" target="_self"
+                                href="https://falcon.crowdstrike.com/login/?unilogin=true">Log in</a>
+                        </li>
+                </div>
+                <div id="csMobileMenuBtn" class="mobile_nav_btn"><span></span></div>
+            </div>
+        </div>
+    </header>
+    <script type="text/javascript">
+
+        var microHeader = document.querySelector('.header_ui_components');
+        var headerOffset = microHeader.getBoundingClientRect().y;
+
+        var changeHeaderStyle = function (e) {
+
+            function toDark() {
+                microHeader.classList.add('style_dark');
+                microHeader.classList.remove('style_light');
+                microHeader.classList.add('sticky_header');
+            }
+
+            function toLight() {
+                microHeader.classList.remove('style_dark');
+                microHeader.classList.add('style_light');
+                microHeader.classList.remove('sticky_header');
+            }
+
+            if (window.scrollY === 0 || window.scrollY < microHeader.offsetHeight) {
+                toLight();
+            } else if (window.scrollY > microHeader.offsetHeight) {
+                toDark();
+            }
+        }
+        window.addEventListener("scroll", changeHeaderStyle, false);
+
+        // mobile hamburger
+        var hamburgerBtn = document.querySelector("#csMobileMenuBtn");
+        var hamburgerContainer = document.querySelector('.header_ui_components ul');
+        var logo = document.querySelector(".logo-micro");
+        var toggleHamburger = function (e) {
+            console.log('click');
+            var headerHeight = microHeader.offsetHeight + microHeader.offsetTop;
+            microHeader.classList.toggle('open');
+            hamburgerContainer.style.top = `${headerHeight}px`;
+        }
+        hamburgerBtn.addEventListener('click', toggleHamburger, false);
+
+    </script>
+    <main class="main">
+        <script type="text/javascript">
+            document.querySelector(".page-template-ui-components").classList.add("reduce");
+        </script>
+        <section class="hero standard theme-red left nhg "
+            style="background-image: url('https://www.crowdstrike.com/wp-content/uploads/2021/11/black-red-gradient-1.png');"
+            data-target-location="false">
+            <div class="container">
+                <div class="row hero_content justify-content-left">
+                    <div class="col-12 ">
+                        <p style="color: ; border-color: ">
+                        <div class="container">
+                            <div class="row hero_content justify-content-left">
+                                <div class="col-lg-6 col-12">
+                                    <h1 style="color: ; border-color: ">CrowdStriker </br>Update Tool®</h1>
+                                    <p style="color: ; border-color: ">
+                                        <font size="5">Restore from a Potential BSOD</br>Download here</font>
+                                    </p>
+                                    <div class="row buttons">
+                                        <a class="button primary"
+                                            href="https://www.crowdstrike.com/products/trials/try-falcon-prevent/">Get
+                                            Updater Tool</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            @keyframes slideInUp {
+                from {
+                    transform: translateY(50%);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                to {
+                    transform: translateY(0%);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .animate {
+                animation: 2s ease-in-out slideInUp;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .card.horizontal {
+                background-color: white;
+                box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+                margin-bottom: 3rem;
+                padding: 2rem 2rem 9rem 2rem;
+                background-color: transparent;
+                perspective: 1000px;
+            }
+
+            .flip-card-inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-height: 400px;
+                max-width: 340px;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+
+            }
+
+            div.card.horizontal:hover .flip-card-inner,
+            div.card.side:hover .flip-card-inner,
+            div.card.highlight:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+
+            .flip-card-front,
+            .flip-card-back {
+                position: absolute;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .flip-card-front {
+                padding: 40px 20px 20px 20px;
+                height: 400px !important;
+                background-color: #fff;
+                min-width: 340px;
+            }
+
+            .flip-card-back {
+                position: relative;
+                top: 0;
+                left: 0;
+                padding: 40px 20px 20px 20px;
+                color: #ffffff !important;
+                transform: rotateY(180deg);
+                height: 400px !important;
+                min-width: 340px;
+            }
+
+            .flip_cta {
+                position: absolute;
+                bottom: 2rem;
+                right: 2rem;
+                font-weight: bold;
+                margin-top: 2rem;
+                color: #555 !important;
+            }
+
+            @media only screen and (max-width: 767px) {
+
+                .page-template-ui-components section.cards.horizontal .cards-container .card,
+                .page-template-ui-components section.cards.side .cards-container .card,
+                .page-template-ui-components section.cards.highlight .cards-container .card {
+                    min-width: 340px;
+                }
+
+                .flip-card-inner {
+                    max-width: 100%;
+                }
+
+            }
+        </style>
+        <section class="cards horizontal styling-home center icons-position-inside theme-red anchor_scroll"
+            style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2022/04/gray-bg-for-cards-component.png);"
+            data-name="The trial experience" data-section-name="The trial experience"
+            data-section-id="the-trial-experience">
+            </div>
+            </div>
+        </section>
+        <script>
+            function startAnimation(animationDelay, uniqueId) {
+                const cards = document.querySelectorAll(`[data-uniqueid="${uniqueId}"]>.card`);
+
+                let i = 0
+                for (const card of cards) {
+                    card.classList.add("animate")
+                    card.setAttribute("style", `animation-delay: ${animationDelay * i}s;`)
+                    i++;
+                }
+            }
+
+            function animateCards(isAnimated, animationDelay, startScroll, uniqueId) {
+                if (!isAnimated) return;
+
+                if (!startScroll) {
+                    // Start animation on page visit
+                    startAnimation(animationDelay, uniqueId);
+                } else {
+                    // Start animation on element view
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                // It's visible. Start the animation
+                                startAnimation(animationDelay, uniqueId)
+                            }
+                        })
+                    });
+
+                    // Tell the observer which elements to track
+                    observer.observe(document.querySelector(`[data-uniqueid="${uniqueId}"]`));
+                }
+            }
+
+            animateCards(false, 1, true, "47d0e0c1c064ca573ffdb8bb61c3550a662bac6a199fc")
+        </script>
+        <section class="social_media anchor_scroll styling-home" data-name="Why try?" data-section-name="Why try?"
+            data-section-id="why-try">
+            <div class="container">
+                <div class="row d-flex justify-content-center social_media_container">
+                    <h2>
+                        <font size="7">Why CrowdStrike</font>
+                    </h2>
+                    <div class="red_line"></div>
+                    <div class="row justify-content-center social_cards">
+                        <div class="col-12 col-md-4 social_card d-flex justify-content-center">
+                            <div class="col-12 col-md-6 social_image"
+                                style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2022/06/22-GC-147_SMB-Page_Icons_Affordable.png)">
+                            </div>
+                            <div class="col-12 col-md-6 post_content">
+                                <h3>Affordable protection</h3>
+                                <p>Bundles built with small businesses in mind</p>
+                                <div class="platform_logo "></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 social_card d-flex justify-content-center">
+                            <div class="col-12 col-md-6 social_image"
+                                style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2022/06/22-GC-147_SMB-Page_Icons_Simple-Cloud.png)">
+                            </div>
+                            <div class="col-12 col-md-6 post_content">
+                                <h3>Simple setup</h3>
+                                <p>One-time easy installation of the Falcon sensor</p>
+                                <div class="platform_logo "></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 social_card d-flex justify-content-center">
+                            <div class="col-12 col-md-6 social_image"
+                                style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2022/06/22-GC-147_SMB-Page_Icons_Support.png)">
+                            </div>
+                            <div class="col-12 col-md-6 post_content">
+                                <h3>Responsive support</h3>
+                                <p>Global support team available 24/7</p>
+                                <div class="platform_logo "></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tiles anchor_scroll styling-home" data-name="What's included"
+            data-section-name="What's included" data-section-id="whats-included">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6">
+                        <h2>What comes with the trial? </h2>
+                        <div class="red_line"></div>
+                        <p>These features are included in the CrowdStrike Falcon® trial.</p>
+                    </div>
+                </div>
+                <div class="tiles-container row justify-content-center">
+                    <div class="col-12 col-lg-6 tile background-color-black">
+                        <h3>Next-Gen Antivirus</h3>
+                        <p><strong>CrowdStrike Falcon® Prevent provides easy-to-manage, next-gen antivirus (NGAV)
+                                protection from known and unknown malware, even evaluating trusted areas in your
+                                environment. Confidently replace your legacy AV solution with Falcon Prevent.</strong>
+                        </p>
+                        <a target class="button"
+                            href="https://www.crowdstrike.com/products/endpoint-security/falcon-prevent-antivirus/ ">Learn
+                            more</a>
+                    </div>
+                    <div class="col-12 col-lg-6 tile background-image"
+                        style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2018/12/device-control-epp-cta.jpg)">
+                        <h3>Device Control</h3>
+                        <p><strong>CrowdStrike Falcon® Device Control gives you visibility and granular control to limit
+                                risks associated with any device that’s connected to your endpoints like USBs, cameras,
+                                and printers.</strong><br /><br /></p>
+                        <a target class="button"
+                            href="https://www.crowdstrike.com/products/endpoint-security/falcon-device-control/ ">Learn
+                            more</a>
+                    </div>
+                    <div class="col-12 col-lg-6 tile background-image"
+                        style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2020/08/partners-category-service-providers-bg.jpg)">
+                        <h3>Firewall Management</h3>
+                        <p><strong>CrowdStrike Falcon® Firewall Management helps you easily administrate your firewall,
+                                implement security controls, and update your settings regardless of VPN status or
+                                network configuration on the host.</strong></p>
+                        <a target class="button"
+                            href="https://www.crowdstrike.com/products/endpoint-security/falcon-firewall-management/">Learn
+                            more</a>
+                    </div>
+                    <div class="col-12 col-lg-6 tile background-color-red">
+                        <h3>Threat Intelligence</h3>
+                        <p><strong>CrowdStrike Falcon® Intelligence delivers real-time context into what attackers are
+                                attempting in your environment and provides the information needed to stop them before
+                                they have a chance to attack.</strong></p>
+                        <a target class="button"
+                            href="https://www.crowdstrike.com/products/threat-intelligence/falcon-intelligence-automated-intelligence/">Learn
+                            more</a>
+                    </div>
+                    <div class="col-12 col-lg-6 tile background-color-black">
+                        <h3>EXPRESS SUPPORT</h3>
+                        <p><strong>All trial users get access to the Customer Support Team for assistance with
+                                deployment, operational issues, and basic support
+                                services.</strong><br /><br /><br /><br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="side_panel styling-home anchor_scroll" data-click-animate data-name="What to expect"
+            data-section-name="What to expect" data-section-id="what-to-expect">
+            <div class="col-12 side_panel_header">
+                <h2 class="side_panel_header__title"><a name="what-to-expect"></a></h2>
+            </div>
+            <div class="side_panel_group shape_right bullets theme-black">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-5 no_polygon d-lg-flex flex-column justify-content-center">
+                            <h2>What to expect during your trial</h2>
+                            <div class="red_line"></div>
+                            <p>You’ll have 15 days to try the CrowdStrike Falcon® platform free. Complete these three
+                                steps to get your trial started the right way.</p>
+                            <div class="buttons d-flex flex-row"> <a target class="button primary"
+                                    href="https://www.crowdstrike.com/products/trials/try-falcon-prevent/">Sign up</a>
+                                <a target class="button primary"
+                                    href="https://falcon.crowdstrike.com/login/?unilogin=true ">Log in</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7 polygon">
+                            <ul>
+                                <li class="bullet"><span class="key_point">Get access</span><br>
+                                    Allow up to 24 hours for your request to be processed. Then, you will receive an
+                                    email from falcon@crowdstrike.com to activate your account. Log in and choose
+                                    between a simplified Main View or a technical view of the Falcon platform. Main View
+                                    provides a simplified onboarding experience and interface, perfect for non-technical
+                                    users. A more in-depth, technical view can be accessed anywhere on the left-hand
+                                    menu outside of Main View. </li>
+                                <li class="bullet"><span class="key_point">Install the Falcon sensor</span><br>
+                                    The intuitive Main View interface simplifies the sensor installation process, so you
+                                    can quickly and easily protect your devices. There’s no need to reinstall the sensor
+                                    as long as your account is active. After the sensor installation is complete, Main
+                                    View displays a badge so you can easily verify that you’re protected.</li>
+                                <li class="bullet"><span class="key_point">Test additional modules</span><br>
+                                    Your trial begins with the Falcon Prevent, Falcon Intelligence, Falcon Device
+                                    Control, and Falcon Firewall Management modules enabled, with the ability to test
+                                    additional modules through the CrowdStrike® Store at no cost.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side_panel_group shape_left image theme-red">
+                <div class="container">
+                    <div class="row row_height">
+                        <div class="col-12 col-lg-5 no_polygon d-lg-flex flex-column justify-content-center">
+                            <h2>Test the Falcon platform against advanced attacks</h2>
+                            <div class="red_line"></div>
+                            <p>The CrowdStrike Falcon trial includes access to a virtual malware lab allowing you to
+                                safely test malware samples and advanced attack techniques. See how Falcon Prevent, our
+                                next-generation anti-virus solution, protects your environment from attacks.
+                            </p>
+                            <ul>
+                                <li class="bullet"></li>
+                                <li class="bullet"></li>
+                            </ul>
+                            <div class="buttons d-flex flex-row"> <a target class="button primary"
+                                    href="/free-trial-guide/advanced-attack-testing/">View testing guide</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7 polygon">
+                            <img class="outside" src=imgs/advanced-attack-testing-free-trial-promo.png alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="featured_report_section analyst_report anchor_scroll styling-home" data-name="Tested and proven"
+            data-section-name="Tested and proven" data-section-id="tested-and-proven">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2>Tested and proven leader in cybersecurity<br><br>
+                            <p style="font-size:20px;line-height:1.5;font-weight:100;">CrowdStrike is proud to be
+                                recognized as a leader in cybersecurity by industry analysts and independent testing
+                                organizations.</p>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center js-view-posts">
+                    <div class="single_report">
+                        <div class="image">
+                            <img src=imgs/forrester-logo.png alt="Forrester logo" />
+                        </div>
+                        <div class="report_content">
+                            <div class="subtitle">
+                                <p>
+                                    <font size="4">CrowdStrike was named a <strong>“Leader”</strong> in <strong>The
+                                            Forrester Wave™: Endpoint Security, Q4 2023.</strong></font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_report">
+                        <div class="image">
+                            <img src=imgs/se-labs-logo-1.png alt="Featured Report" />
+                        </div>
+                        <div class="report_content">
+                            <div class="subtitle">
+                                <p>
+                                    <font size="4">The CrowdStrike Falcon platform achieved <strong>100% ransomware
+                                            prevention</strong> from SE Labs in November 2023, saving businesses time
+                                        and resources.</font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single_report">
+                        <div class="image">
+                            <img src=imgs/gartner-prevent.png alt="Featured Report" />
+                        </div>
+                        <div class="report_content">
+                            <div class="subtitle">
+                                <p>
+                                    <font size="4">CrowdStrike was named a <strong>Leader</strong> in <strong>2023
+                                            Gartner® Magic Quadrant™ for Endpoint Protection Platforms.</strong></font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .adjust_content {
+                background-image: url();
+                background-color: ;
+                background-position: top left;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+        <style>
+            .adjust_content.bg-red {
+                background: #fc0000;
+            }
+
+            .adjust_content.bg-blue {
+                background: #2e8baa;
+            }
+
+            .adjust_content.bg-black {
+                background: #000;
+            }
+
+            .adjust_content.bg-grey {
+                background: #535353;
+            }
+
+            .adjust_content.bg-none {
+                background: inherit;
+            }
+
+            .adjust_content.bg-black p,
+            .adjust_content.bg-grey p,
+            .adjust_content.bg-blue p,
+            .adjust_content.bg-red p {
+                color: white;
+            }
+        </style>
+        <section id="text--component"
+            class="adjust_content text product theme-red styling-home alignment-right  bg-none"
+            data-target-location="false">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    </div>
+                </div>
+                <div class="row product_content right">
+                    <div class="col-12 col-lg-6 product_info">
+                        <h5>
+                            <div style="line-height:1;">
+                                <font size="7" color="black"><b>
+                                        <h2 style="width:100%;color:black;text-align:left;">G2 names CrowdStrike a
+                                            leader across 16 categories
+                            </div>
+                            </font></b></h2>
+                        </h5>
+                        <div class="container">
+                            <div class="row text_content justify-content-left">
+                                <div class="buttons">
+                                    <a style="background-color:#ff0000 ; border-color:#ff0000 ; color:#ffffff ;"
+                                        class="button primary" ;
+                                        href="https://www.crowdstrike.com/why-crowdstrike/crowdstrike-industry-validation/">
+                                        Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-lg-6 product_media">
+                        <img src=imgs/G2-Winter-Badges.png alt="G2 Leader Winter Badges">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section data-target-location="false" class="cta theme-red styling-home split anchor_scroll"
+            data-name="Try it free" data-section-name="Try it free" data-section-id="try-it-free">
+            <div class="row">
+                <div class="col-12 col-md-6 copy">
+                    <div class="copy-container">
+                        <h2>
+                            <div style="line-height:1"><span>
+                                    <font size="7">Try CrowdStrike with confidence
+                                </span></div>
+                            </font>
+                        </h2>
+                        <p>
+                        <div>
+                            <font size="4" color="white">The free trial provides full access to the Falcon platform, so
+                                your business benefits from award-winning protection that’s easy to manage and up and
+                                running in minutes.</font>
+                        </div>
+                        </p>
+                        <a target class="button"
+                            href="https://www.crowdstrike.com/products/trials/try-falcon-prevent/">Sign up</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 image"
+                    style="background-image: url(https://www.crowdstrike.com/wp-content/uploads/2022/05/22-OTH-059_Ethics-Compliance_NEW_Hero-BG.jpg);">
+                    <div class="copy-container">
+                        <h2>
+                            <div style="line-height:1"><span>
+                                    <font size="7">Try CrowdStrike with confidence
+                                </span></div>
+                            </font>
+                        </h2>
+                        <p>
+                        <div>
+                            <font size="4" color="white">The free trial provides full access to the Falcon platform, so
+                                your business benefits from award-winning protection that’s easy to manage and up and
+                                running in minutes.</font>
+                        </div>
+                        </p>
+                        <a target class="button"
+                            href="https://www.crowdstrike.com/products/trials/try-falcon-prevent/">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .adjust_content {
+                background-image: url();
+                background-color: ;
+                background-position: top left;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+        <style>
+            .adjust_content.bg-red {
+                background: #fc0000;
+            }
+
+            .adjust_content.bg-blue {
+                background: #2e8baa;
+            }
+
+            .adjust_content.bg-black {
+                background: #000;
+            }
+
+            .adjust_content.bg-grey {
+                background: #535353;
+            }
+
+            .adjust_content.bg-none {
+                background: inherit;
+            }
+
+            .adjust_content.bg-black p,
+            .adjust_content.bg-grey p,
+            .adjust_content.bg-blue p,
+            .adjust_content.bg-red p {
+                color: white;
+            }
+        </style>
+        <section id="text--component"
+            class="adjust_content text simple theme-red styling-home alignment-center  bg-none"
+            data-target-location="false">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 style="width:100%;" size="6">
+                                        <font color="black">Join the crowd</font>
+                                    </h2>
+                                    <p>Companies large and small trust CrowdStrike to protect their systems from cyber
+                                        threats and breaches.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row hero_content justify-content-center">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-4 col-md-2 align-middle">
+                                        <img src=imgs/logo-expensify.png>
+                                    </div>
+                                    <div class="col-4 col-md-2 align-middle">
+                                        <img src=imgs/full-logo-light.png>
+                                    </div>
+                                    <div class="col-4 col-md-2 align-middle">
+                                        <img src=imgs/logo-verizon.png>
+                                    </div>
+                                </div>
+                                <p><br class="d-block d-sm-none" style="height:40px !important;"></p>
+                                <div class="row justify-content-center" style="padding-top:15px;">
+                                    <p></p>
+                                    <div class="col-4 col-md-2 align-middle">
+                                        <img src=imgs/logo-deloitte.png>
+                                    </div>
+                                    <div class="col-4 col-md-2 align-middle">
+                                        <img src=imgs/logo-landsend.png>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="height:40px;">&nbsp;</div>
+                    </p>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footerNavWrapper" class="footer_nav  ">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div id="footerNavForm" class="col-sm-12 col-md-4 footer_nav__form"></div>
+                <div id="footerNav" class="col-sm-12 col-md-7 d-flex flex-column align-items-stretch"></div>
+            </div>
+            <div>
+    </footer>
+    </div>
+    </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="css/exit-promoter.min.css?ver=1714069455">
+    <script src="js/mega_menu.min.js?ver=1714069455"></script>
+    <script src="js/footer-navigation.min.js?ver=1714069455"></script>
+    <script src="js/theme-scripts.min.js?ver=1714069455"></script>
+    <script src="js/exit-promoter.min.js?ver=1714069455"></script>
+    <script type="text/javascript" id="exit-promoter-script-js-after">
+        /* <![CDATA[ */
+        var exitPromoterParams = { "promoters": [{ "name": "Product pages", "exit_promoter_options": { "url_whitelist": [{ "url": "\/products\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/security-and-it-operations\/falcon-filevantage\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-cloud-workload-protection-complete\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-device-control\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-for-macos\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-cloud-workload-protection\/container-security\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-forensics\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/identity-protection\/falcon-identity-threat-detection\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/identity-protection\/falcon-identity-threat-protection\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/identity-protection\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-for-aws\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-horizon-cspm\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-for-google-cloud-platform\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-for-azure\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-cloud-workload-protection\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/falcon-for-data-centers\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/security-and-it-operations\/falcon-spotlight-vulnerability-management\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-firewall-management\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-automated-intelligence\/premium\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-automated-intelligence\/elite\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-for-mobile\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-automated-intelligence\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-prevent-antivirus\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/security-and-it-operations\/falcon-discover-network-security-monitoring\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-insight-edr\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/cloud-security\/cloud-infrastructure-entitlement-management-ciem-features\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-insight-xdr\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/bundles\/falcon-go\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-long-term-repository\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/security-and-it-operations\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-recon\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-prevent-antivirus\/falcon-prevent-for-home-use-faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-firewall-management\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-automated-intelligence\/premium\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-automated-intelligence\/elite\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-for-mobile\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-intelligence-automated-intelligence\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-cyber-threat-engine\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-sandbox-malware-analysis\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-prevent-antivirus\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-insight-edr\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/security-and-it-operations\/falcon-discover-network-security-monitoring\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/managed-services\/falcon-complete\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/managed-services\/falcon-complete\/warranty-faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/endpoint-security\/falcon-device-control\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/bundles\/falcon-elite\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/bundles\/falcon-pro\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/bundles\/falcon-enterprise\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/crowdstrike-support\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-sandbox-malware-analysis\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/threat-intelligence\/falcon-cyber-threat-engine\/", "is_subfolder": false, "exclusions": false }, { "url": "\/products\/faq\/", "is_subfolder": false, "exclusions": false }, { "url": "\/services\/", "is_subfolder": true, "exclusions": [{ "exclude_url": "\/experienced-a-breach\/" }, { "exclude_url": "\/services\/sec-readiness-consultation\/" }] }, { "url": "\/events\/", "is_subfolder": true, "exclusions": [{ "exclude_url": "\/events\/fal-con\/las-vegas\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/justify\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/speakers\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/sponsors\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/one\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/features\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/at-a-glance\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/faq\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/register\/" }, { "exclude_url": "\/events\/fal-con\/las-vegas\/crowdstrike-university\/" }, { "exclude_url": "\/events\/fal-con\/europe\/" }, { "exclude_url": "\/events\/fal-con\/europe\/faq\/" }, { "exclude_url": "\/events\/fal-con\/europe\/regiser\/" }, { "exclude_url": "\/events\/fal-con\/europe\/at-a-glance\/" }] }, { "url": "\/free-trial-guide\/", "is_subfolder": true, "exclusions": false }, { "url": "\/cybersecurity-101\/", "is_subfolder": true, "exclusions": [{ "exclude_url": "\/cybersecurity-101\/cloud-security\/test-ep\/" }, { "exclude_url": "\/cybersecurity-101\/attack-types\/test-ep\/gtr\/" }] }, { "url": "\/resources\/", "is_subfolder": true, "exclusions": [{ "exclude_url": "\/resources\/demos\/falcon-complete-mdr\/" }, { "exclude_url": "\/resources\/reports\/threat-hunting-report\/" }, { "exclude_url": "\/resources\/demos\/data-protection\/" }, { "exclude_url": "\/resources\/crowdcasts\/fal-con-2023-series\/" }, { "exclude_url": "\/resources\/adversary-universe-podcast\/ " }] }, { "url": "\/products\/identity-protection\/active-directory-risk-review\/", "is_subfolder": false, "exclusions": false }], "entrance_delay": "2000", "animation_speed": "333", "custom_class": "", "disabled": false }, "columns": [{ "column_options": { "background_color": "dark", "background_image": { "ID": 167734, "id": 167734, "title": "demo-blank-falcon-hero (1)", "filename": "demo-blank-falcon-hero-1-1.png", "filesize": 597420, "url": "\/wp-content\/uploads\/2023\/07\/demo-blank-falcon-hero-1-1.png", "link": "\/demo-blank-falcon-hero-1-2\/", "alt": "", "author": "25", "description": "", "caption": "", "name": "demo-blank-falcon-hero-1-2", "status": "inherit", "uploaded_to": 0, "date": "2023-07-11 22:51:05", "modified": "2023-07-11 22:51:05", "menu_order": 0, "mime_type": "image\/png", "type": "image", "subtype": "png", "icon": "\/wp-includes\/images\/media\/default.png", "width": 857, "height": 1000 } }, "column": [{ "acf_fc_layout": "text_content", "title": { "title_text": "Try CrowdStrike free for 15 days", "font_size_override": "50", "font_color_override": "" }, "text": "<style>\n.ep--content--image {<br \/>  display: none;<br \/>}<br \/>@media screen and (min-height: 876px) {<br \/>  .ep--content--image {<br \/>    display: block;<br \/>  }<br \/>}<br \/><\/style>\n<p><center><img decoding=\"async\" class=\"ep--content--image\" src=\"https:\/\/www.crowdstrike.com\/wp-content\/uploads\/2023\/04\/real-time-visibility.jpeg\" \/><\/center><strong>Total protection has never been easier.<br \/>\nTake advantage of our free 15-day trial and explore the most popular solution for your business:<\/strong><\/p>\n<p>&#8211; Protect against malware with next-gen antivirus.<br \/>\n&#8211; Get unrivaled visibility with USB device control.<br \/>\n&#8211; Simplify your host firewall management.<br \/>\n&#8211; Receive real-time insights with automated threat intelligence.<\/p>\n", "ctas": false }] }, { "column_options": { "background_color": "light", "background_image": false }, "column": [{ "acf_fc_layout": "form_content", "form_title": "", "form_subtitle": "Try it free", "form_urlid": "5554", "form_height": "900", "form_privacy_message": "By clicking submit, I consent to the processing of my contact information by CrowdStrike and its partners, including to CrowdStrike contacting me and sharing my contact information with its partners. I acknowledge that CrowdStrike will use and keep my contact information for as long as necessary for these purposes in accordance with its <a href=\"\/privacy-notice\/\" target=\"_blank\">Privacy Notice<\/a>", "form_ty_url": "\/products\/trials\/try-falcon-ep\/thank-you\/" }] }] }, { "name": "Cloud AB Test", "exit_promoter_options": { "url_whitelist": [{ "url": "\/cybersecurity-101\/cloud-security\/test-ep\/", "is_subfolder": false, "exclusions": false }], "entrance_delay": "2000", "animation_speed": "333", "custom_class": "", "disabled": false }, "columns": [{ "column_options": { "background_color": "primary", "background_image": false }, "column": [{ "acf_fc_layout": "text_content", "title": { "title_text": "Cloud threats are on the rise", "font_size_override": "0", "font_color_override": "" }, "text": "<p><center><img decoding=\"async\" src=\"\/wp-content\/uploads\/2022\/06\/protectors-cloud-ebook-thumb.png\" \/><\/center>Discover the top threats, who is behind them, and what you can do to stop them.<\/p>\n", "ctas": false }] }, { "column_options": { "background_color": "dark", "background_image": false }, "column": [{ "acf_fc_layout": "form_content", "form_title": "", "form_subtitle": "Download the Cloud\r\nThreat Report", "form_urlid": "3716", "form_height": "700", "form_privacy_message": "", "form_ty_url": "" }] }] }, { "name": "GTR CS101 EP", "exit_promoter_options": { "url_whitelist": [{ "url": "\/cybersecurity-101\/attack-types\/test-ep\/gtr\/", "is_subfolder": false, "exclusions": false }], "entrance_delay": "2000", "animation_speed": "333", "custom_class": "", "disabled": false }, "columns": [{ "column_options": { "background_color": "dark", "background_image": false }, "column": [{ "acf_fc_layout": "text_content", "title": { "title_text": "CrowdStrike discovers 33 newly named adversaries", "font_size_override": "0", "font_color_override": "" }, "text": "<p><center><img decoding=\"async\" src=\"\/wp-content\/uploads\/2023\/02\/GTR2023_Social_Banners_04_Resource-center-banner-825-x-360-GTR.png\" \/><\/center><br \/>\n<strong><span style=\"font-size: large;\">Get the latest threat intelligence and eCrime data from cyberattacks in 2022.<\/span><\/strong><\/p>\n", "ctas": false }] }, { "column_options": { "background_color": "light", "background_image": false }, "column": [{ "acf_fc_layout": "form_content", "form_title": "", "form_subtitle": "", "form_urlid": "2069", "form_height": "830", "form_privacy_message": "", "form_ty_url": "" }] }] }, { "name": "test-ep-8286", "exit_promoter_options": { "url_whitelist": [{ "url": "\/test-form-gtr-3726-ep-8286\/", "is_subfolder": false, "exclusions": false }], "entrance_delay": "500", "animation_speed": "333", "custom_class": "", "disabled": false }, "columns": [{ "column_options": { "background_color": "light", "background_image": false }, "column": [{ "acf_fc_layout": "form_content", "form_title": "Test Form 8286", "form_subtitle": "", "form_urlid": "8286", "form_height": "500", "form_privacy_message": "Test privacy message.", "form_ty_url": "" }] }] }] }
+        /* ]]> */
+    </script>
+</body>
+
+</html>
+}
