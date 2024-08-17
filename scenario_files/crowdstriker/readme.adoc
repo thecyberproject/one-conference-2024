@@ -4,5 +4,12 @@ NOTE: Crowdstriker is used for a representative cyber scenario and does not have
 
 Is a quick phising clone for users to download our upgrader (dummy) malware. 
 
+....
+[source,bash]
 
+make build 
+cd /bin
+./the_build_binary
+....
 
+Can be found on on `http://localhost:8081`
