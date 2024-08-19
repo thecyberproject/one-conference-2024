@@ -3,7 +3,7 @@ module "soarca" {
   source              = "../base-spec-cloudinit"
   vm_name             = "ONEC-Soarca"
   vm_description      = "Soarca for the one-conference"
-  vm_id               = 1312
+  vm_id               = 1302
   template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
   template_full_clone = true
   admin_username      = "ansible"
@@ -48,7 +48,7 @@ module "attackvm" {
   source              = "../base-spec-cloudinit"
   vm_name             = "Attacker"
   vm_description      = "AttackerVM for the one-conference"
-  vm_id               = 1313
+  vm_id               = 1303
   template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
   template_full_clone = true
   admin_username      = "ansible"
@@ -93,7 +93,7 @@ module "wazuh" {
   source              = "../base-spec-cloudinit"
   vm_name             = "ONEC-Wazuh"
   vm_description      = "Wazuh for the one-conference"
-  vm_id               = 1314
+  vm_id               = 1304
   template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
   template_full_clone = true
   admin_username      = "ansible"
@@ -142,7 +142,7 @@ module "ad" {
   vm_name        = "ONEC-Windows-Server-2019-AD"
   vm_description = "Windows AD Server"
 
-  vm_id                  = 1315
+  vm_id                  = 1305
   template_clone         = "Windows-Server-2019-ga-template-csthv04"
   template_full_clone    = true
   proxmox_node           = var.proxmox_node
@@ -172,7 +172,7 @@ module "client" {
   vm_name        = format("ONEC-Windows-10-%03d", count.index + 1)
   vm_description = "ONEC-Windows netwerk server"
 
-  vm_id                  = 1316 + count.index + 1
+  vm_id                  = 1306 + count.index + 1
   template_clone         = "Windows-10-22H2-ga-template-csthv04"
   template_full_clone    = true
   proxmox_node           = var.proxmox_node
