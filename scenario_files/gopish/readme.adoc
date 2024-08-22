@@ -1,10 +1,11 @@
-= gopish
+= GoPhish
 
 
 https://github.com/gophish/gophish[Gophish]: Open-Source Phishing Toolkit
 
 Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.
 
+== Setting up GoPhish
 
 [source,bash]
 ....
@@ -20,3 +21,5 @@ screen -S gophish
 ....
 
 You can also run gophish as a service as described https://github.com/gophish/gophish/issues/586[here], but for the scenario running it as a process should be fine. 
+
+Now the admin portal runs on port `3333`. Next, we can import the `template.html` located in this repository. The template can be loaded under `Email Templates`
