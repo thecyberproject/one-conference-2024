@@ -46,7 +46,7 @@
                     "type": "http-api",
                     "description": "HTTP call to Opnsense API addRule:\n/api/firewall/npt/addRule\n",
                     "command": "POST /api/firewall/filter/addRule HTTP/1.1",
-                    "content": "{\"rule\":{\"description\":\"OPNsense SOARCA Rule\",\"source_net\":\"__source_net__:value\",\"protocol\":\"ICMP\",\"destination_net\":\"__target_net__:value\",\"action\":\"block\",\"interface\":\"lan\"}}",
+                    "content": "{\"rule\":{\"description\":\"OPNsense SOARCA Rule\",\"source_net\":\"__source_net__:value\",\"protocol\":\"any\",\"destination_net\":\"__target_net__:value\",\"action\":\"block\",\"interface\":\"lan\"}}",
                     "headers": {
                         "Content-type": [
                             "application/json"
@@ -57,6 +57,7 @@
                     "type": "http-api",
                     "description": "Apply the filter rule in OPNsense",
                     "command": "POST /api/firewall/filter/apply HTTP/1.1",
+                    "content": "{}",
                     "headers": {
                         "Content-type": [
                             "application/json"
