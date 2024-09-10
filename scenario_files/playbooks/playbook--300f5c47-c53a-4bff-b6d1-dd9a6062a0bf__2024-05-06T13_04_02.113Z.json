@@ -1,0 +1,97 @@
+{
+    "type": "playbook",
+    "spec_version": "cacao-2.0",
+    "id": "playbook--300f5c47-c53a-4bff-b6d1-dd9a6062a0bf",
+    "name": "Add block rule in OPNsense",
+    "description": "This playbook will add a block rule in OPNsense",
+    "created_by": "identity--69531c15-ce04-4076-856f-088e55acca3d",
+    "created": "2024-05-06T13:04:02.113Z",
+    "modified": "2024-05-06T14:02:29.908Z",
+    "revoked": false,
+    "derived_from": [
+        "playbook--304770a4-a895-4843-99b7-9d895e7917a8"
+    ],
+    "playbook_variables": {
+        "__source_net__": {
+            "type": "string",
+            "constant": true,
+            "external": true
+        },
+        "__target_net__": {
+            "type": "string",
+            "constant": true,
+            "external": true
+        },
+        "__opnsense_user__": {
+            "type": "string",
+            "constant": true,
+            "external": true
+        },
+        "__opnsense_key__": {
+            "type": "string",
+            "constant": true,
+            "external": true
+        }
+    },
+    "workflow_start": "start--8e717805-03ec-4b8d-a969-7382370d2a39",
+    "workflow": {
+        "start--8e717805-03ec-4b8d-a969-7382370d2a39": {
+            "on_completion": "action--e70f3678-40ca-4ad0-b49f-b7e5038f0a52",
+            "type": "start"
+        },
+        "action--e70f3678-40ca-4ad0-b49f-b7e5038f0a52": {
+            "name": "Reconfigure Opnsense firewall",
+            "description": "This action will set the following firewall rule in Opnsense for IPv4 (host):  ",
+            "on_completion": "end--4f5df533-d652-4e9e-afbf-aaaf5e4c8c8f",
+            "type": "action",
+            "commands": [
+                {
+                    "type": "http-api",
+                    "description": "HTTP call to Opnsense API addRule:\n/api/firewall/npt/addRule\n",
+                    "command": "POST /api/firewall/filter/addRule HTTP1.1",
+                    "content": "{\"rule\":{\"description\":\"OPNsense SOARCA Rule\",\"source_net\":\"__source_net__:value\",\"protocol\":\"ICMP\",\"destination_net\":\"__target_net__:value\",\"action\":\"block\",\"interface\":\"lan\"}}",
+                    "headers": {
+                        "Content-type": [
+                            "application/json"
+                        ]
+                    }
+                }
+            ],
+            "agent": "soarca--a2a14ae9-b38f-4f54-b1b5-96dac9c4ea7e",
+            "targets": [
+                "http-api--1e710df2-ce4e-4c5b-ba04-6c9ac5e5c4bd"
+            ]
+        },
+        "end--4f5df533-d652-4e9e-afbf-aaaf5e4c8c8f": {
+            "type": "end"
+        }
+    },
+    "authentication_info_definitions": {
+        "http-basic--6b8bd23f-b168-47d4-a84c-7309d25c3de3": {
+            "type": "http-basic",
+            "name": "OPNsense key",
+            "user_id": "__opnsense_user__:value",
+            "password": "__opnsense_key__:value",
+            "kms": false
+        }
+    },
+    "agent_definitions": {
+        "soarca--a2a14ae9-b38f-4f54-b1b5-96dac9c4ea7e": {
+            "type": "soarca",
+            "name": "soarca-http-api"
+        }
+    },
+    "target_definitions": {
+        "http-api--1e710df2-ce4e-4c5b-ba04-6c9ac5e5c4bd": {
+            "type": "http-api",
+            "name": "Opnsense demo firewall",
+            "address": {
+                "ipv4": [
+                    "192.168.1.1"
+                ]
+            },
+            "authentication_info": "http-basic--6b8bd23f-b168-47d4-a84c-7309d25c3de3",
+            "port": "443"
+        }
+    }
+}
