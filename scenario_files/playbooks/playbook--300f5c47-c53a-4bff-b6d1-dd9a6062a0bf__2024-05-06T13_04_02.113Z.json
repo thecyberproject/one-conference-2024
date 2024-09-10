@@ -5,12 +5,9 @@
     "name": "Add block rule in OPNsense",
     "description": "This playbook will add a block rule in OPNsense",
     "created_by": "identity--69531c15-ce04-4076-856f-088e55acca3d",
-    "created": "2024-05-06T13:04:02.113Z",
-    "modified": "2024-05-06T14:02:29.908Z",
+    "created": "2024-09-10T09:46:45.179Z",
+    "modified": "2024-09-10T09:46:45.179Z",
     "revoked": false,
-    "derived_from": [
-        "playbook--304770a4-a895-4843-99b7-9d895e7917a8"
-    ],
     "playbook_variables": {
         "__source_net__": {
             "type": "string",
@@ -48,8 +45,18 @@
                 {
                     "type": "http-api",
                     "description": "HTTP call to Opnsense API addRule:\n/api/firewall/npt/addRule\n",
-                    "command": "POST /api/firewall/filter/addRule HTTP1.1",
+                    "command": "POST /api/firewall/filter/addRule HTTP/1.1",
                     "content": "{\"rule\":{\"description\":\"OPNsense SOARCA Rule\",\"source_net\":\"__source_net__:value\",\"protocol\":\"ICMP\",\"destination_net\":\"__target_net__:value\",\"action\":\"block\",\"interface\":\"lan\"}}",
+                    "headers": {
+                        "Content-type": [
+                            "application/json"
+                        ]
+                    }
+                },
+                {
+                    "type": "http-api",
+                    "description": "Apply the filter rule in OPNsense",
+                    "command": "POST https://opnsenseIP/api/firewall/filter/apply HTTP/1.1",
                     "headers": {
                         "Content-type": [
                             "application/json"
