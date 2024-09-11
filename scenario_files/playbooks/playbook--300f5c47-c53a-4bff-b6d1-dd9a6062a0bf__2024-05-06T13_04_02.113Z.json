@@ -9,15 +9,16 @@
     "modified": "2024-09-10T09:46:45.179Z",
     "revoked": false,
     "playbook_variables": {
-        "__source_net__": {
-            "type": "string",
+        "__affected_agent_ip__": {
+            "type": "ip",
             "constant": true,
             "external": true
         },
         "__target_net__": {
             "type": "string",
             "constant": true,
-            "external": true
+            "external": true,
+            "value": "any"
         },
         "__opnsense_user__": {
             "type": "string",
@@ -46,7 +47,7 @@
                     "type": "http-api",
                     "description": "HTTP call to Opnsense API addRule:\n/api/firewall/npt/addRule\n",
                     "command": "POST /api/firewall/filter/addRule HTTP/1.1",
-                    "content": "{\"rule\":{\"description\":\"OPNsense SOARCA Rule\",\"source_net\":\"__source_net__:value\",\"protocol\":\"any\",\"destination_net\":\"__target_net__:value\",\"action\":\"block\",\"interface\":\"lan\"}}",
+                    "content": "{\"rule\":{\"description\":\"OPNsense SOARCA Rule\",\"source_net\":\"__affected_agent_ip__:value\",\"protocol\":\"any\",\"destination_net\":\"__target_net__:value\",\"action\":\"block\",\"interface\":\"lan\"}}",
                     "headers": {
                         "Content-type": [
                             "application/json"

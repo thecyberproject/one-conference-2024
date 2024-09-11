@@ -51,6 +51,22 @@
             "type": "string",
             "constant": false,
             "external": true
+        },
+        "__target_net__": {
+            "type": "string",
+            "constant": true,
+            "external": true,
+            "value": "any"
+        },
+        "__opnsense_user__": {
+            "type": "string",
+            "constant": true,
+            "external": true
+        },
+        "__opnsense_key__": {
+            "type": "string",
+            "constant": true,
+            "external": true
         }
     },
     "workflow_start": "start--8f3919a1-e4a3-4d05-a960-905199e5da43",
@@ -135,7 +151,12 @@
             "on_completion": "playbook-action--cf57af9f-16ff-4fff-971e-dc3d9157ba23",
             "type": "if-condition",
             "condition": "__affected_agent_ip__:value IN 192.168.1.0/24",
-            "on_true": "playbook-action--50297ac6-38e4-4ac9-8be5-b1706b66d76e"
+            "on_true": "playbook-action--50297ac6-38e4-4ac9-8be5-b1706b66d76e",
+            "in_args": [
+                "__opnsense_user__",
+                "__opnsense_key__",
+                "__affected_agent_ip__"
+            ]
         },
         "playbook-action--50297ac6-38e4-4ac9-8be5-b1706b66d76e": {
             "name": "Block host",

@@ -71,6 +71,7 @@
                     "192.168.1.121"
                 ]
             },
+            "port": "5985",
             "authentication_info": "authentication-info--9a2d2fd6-aa6d-4d2e-ad2a-f6f84d544dbc"
         }
     }
