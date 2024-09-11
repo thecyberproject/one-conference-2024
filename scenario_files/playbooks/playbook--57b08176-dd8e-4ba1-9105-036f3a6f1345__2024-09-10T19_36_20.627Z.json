@@ -61,12 +61,14 @@
         "__opnsense_user__": {
             "type": "string",
             "constant": true,
-            "external": true
+            "external": true,
+            "value": "KuOQ7U4ykzHtWPfHCxS3Q/tJvKT6F3JLfN/pwAbWwSH0Qgp9zEpbE5S7BG6uu+vpRj3dUtW8TgFsw6w3"
         },
         "__opnsense_key__": {
             "type": "string",
             "constant": true,
-            "external": true
+            "external": true,
+            "value": "x+25NKM+xLWHlliUPHtYlkW4xJvEQxXmhkeHQkFwt3ddIlmoEogyf+PdUad4TrbY90yOKUax53PJWnrx"
         }
     },
     "workflow_start": "start--8f3919a1-e4a3-4d05-a960-905199e5da43",
