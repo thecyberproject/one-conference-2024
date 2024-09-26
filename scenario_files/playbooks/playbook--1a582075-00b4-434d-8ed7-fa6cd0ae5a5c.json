@@ -1,0 +1,124 @@
+{
+    "type": "playbook",
+    "spec_version": "cacao-2.0",
+    "id": "playbook--1a582075-00b4-434d-8ed7-fa6cd0ae5a5c",
+    "name": "Example email send action",
+    "description": "This playbook demonstrates email responder functionality",
+    "playbook_types": [
+        "notification"
+    ],
+    "created_by": "identity--7bdd9786-8615-4428-b91e-1da953f79202",
+    "created": "2024-05-01T19:04:21.810Z",
+    "modified": "2024-05-02T14:01:46.361Z",
+    "revoked": false,
+    "valid_from": "2024-05-02T05:00:00.000Z",
+    "valid_until": "2124-05-02T05:00:00.000Z",
+    "priority": 1,
+    "severity": 1,
+    "impact": 1,
+    "labels": [
+        "soarca",
+        "email"
+    ],
+    "workflow_start": "start--4f105271-b62d-4b4b-aa3b-e6c7318f4969",
+    "workflow_exception": "end--64dd35ff-b79b-454a-a23d-1a4a72cb2c42",
+    "workflow": {
+        "start--4f105271-b62d-4b4b-aa3b-e6c7318f4969": {
+            "name": "Start Flow",
+            "on_completion": "action--856d4f19-1407-4d55-97ae-5a7539852695",
+            "type": "start"
+        },
+        "action--856d4f19-1407-4d55-97ae-5a7539852695": {
+            "name": "send-email",
+            "description": "This is a demo action that will invoke an email sending capabilities.",
+            "step_variables": {
+                "__sender_email__": {
+                    "type": "string",
+                    "description": "The email address to send the email from.",
+                    "value": "no-reply@di.mod.bg",
+                    "constant": false,
+                    "external": false
+                },
+                "__receiver_email__": {
+                    "type": "string",
+                    "description": "The email address to send the email to.",
+                    "value": "hackyoneconf@gmail.com",
+                    "constant": false,
+                    "external": false
+                },
+                "__email_subject__": {
+                    "type": "string",
+                    "description": "The subject that will be used in the email.",
+                    "value": "SOARCA: Test email sent via the email responder.",
+                    "constant": false,
+                    "external": false
+                },
+                "__email_body__": {
+                    "type": "string",
+                    "description": "The body of the email.",
+                    "value": "<html><body><h1>Test email from SOARCA Fin</h1><p>This is a test email from SOARCA Fin</p><p>This email is send from {{ __server_address__.value }}</p></body></html>",
+                    "constant": false,
+                    "external": true
+                },
+                "__server_address__": {
+                    "type": "uri",
+                    "description": "Email server address.",
+                    "value": "mail.di.mod.bg",
+                    "constant": false,
+                    "external": false
+                },
+                "__server_port__": {
+                    "type": "integer",
+                    "description": "The port of the email server.",
+                    "value": "465",
+                    "constant": false,
+                    "external": false
+                }
+            },
+            "on_completion": "end--64dd35ff-b79b-454a-a23d-1a4a72cb2c42",
+            "type": "action",
+            "commands": [
+                {
+                    "type": "send-email",
+                    "command": "send"
+                }
+            ],
+            "agent": "agent-target--ac4b60fe-abaa-4522-af0b-f352ecd93a5f",
+            "targets": [
+                "agent-target--457edcbf-f9c0-4e5e-80d0-5df954f10b6c"
+            ]
+        },
+        "end--64dd35ff-b79b-454a-a23d-1a4a72cb2c42": {
+            "name": "End Flow",
+            "type": "end"
+        }
+    },
+    "authentication_info_definitions": {
+        "authentication-info--2551424b-a498-4b47-b670-a3210203c648": {
+            "type": "user-auth",
+            "name": "email-server-1",
+            "description": "The credentials for the email server",
+            "username": "no-reply@di.mod.bg",
+            "password": "vmwfPjvI60eY95pDQLXHVBXdHTyhej",
+            "kms": false
+        }
+    },
+    "agent_definitions": {
+        "agent-target--ac4b60fe-abaa-4522-af0b-f352ecd93a5f": {
+            "type": "soarca",
+            "name": "soarca-email"
+        }
+    },
+    "target_definitions": {
+        "agent-target--457edcbf-f9c0-4e5e-80d0-5df954f10b6c": {
+            "type": "net-address",
+            "name": "email-server-1",
+            "address": {
+                "url": [
+                    "smtp://mail.di.mod.bg"
+                ]
+            },
+            "authentication_info": "authentication-info--2551424b-a498-4b47-b670-a3210203c648"
+        }
+    }
+}
