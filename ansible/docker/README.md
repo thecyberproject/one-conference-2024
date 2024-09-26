@@ -1,4 +1,4 @@
-= Docker
+# Docker
 
 Requirements can be installed by running:
 
