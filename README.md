@@ -1,8 +1,11 @@
-= soarca-one-conference-2024
+<div align="center">
+<a href="https://cossas-project.org/cossas-software/soarca"><img src="img/soarca-logo.svg"/>
 
-This Repository contains all the files for the One-Conference talk on: **SOARCA: open-source SOAR for CACAO playbook automation**.
+# soarca-one-conference-2024
 
-== Abstract of Talk
+This Repository contains all the files for the One Conference talk on: **SOARCA: open-source SOAR for CACAO playbook automation**.
+
+## Abstract of Talk
 
 In an ever-changing landscape of organisational cybersecurity, resilience has become of imperative importance. To be better equipped against threat actors and their increasingly more complex tactics, techniques and procedures, organisations must actively engage in the detection, investigation, prevention, mitigation, and remediation of cyber threats in a timely manner. To accomplish this, organisations are increasingly automating threat and incident response via playbook driven approaches. Security playbooks maintain case-specific sequences of actions, workflows, that can detail the execution of security procedures, for instance a response of a detected phishing email, or a compromised asset. These workflows can be expressed in a machine-readable format, and are typically executed by a Security Orchestration, Automation and Response (SOAR) tool. Normally, SOAR tools employ proprietary and closed playbook formats, which strongly limit cybersecurity interoperability and information sharing among different tools, and organisations, thus reducing overall cybersecurity posture. The CACAO playbook format, developed by OASIS Open , introduces a standardised definition of security playbooks, hence advancing the state-of-play in this field.
 
@@ -15,21 +18,16 @@ Secondly, we will demonstrate how SOARCA executes a CACAO playbook to remediate 
 Furthermore, we will delve into the inner workings of our platform, illustrating how the orchestration and automation capabilities of SOARCA can be tailored to meet specific requirements using our SOARCA Fin library , enabling creation of custom functionalities in Python to effectively address unique security challenges.
 
 
-== Scenario Description
+## Scenario Description
 
 Vertex Value 
 
 
-== Code Explanation
-
+## Code Explanation
 
 We build a lab environment utilising https://www.proxmox.com/en/[Proxmox] as depicted in the figure below (to be added). For easil
 
-
-
-
-
-== Project Tree
+## Project Tree
 
 ```bash
 .
