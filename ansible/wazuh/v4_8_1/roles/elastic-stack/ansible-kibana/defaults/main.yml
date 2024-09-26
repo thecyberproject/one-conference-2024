@@ -22,14 +22,14 @@ wazuh_api_credentials:
     url: "https://localhost"
     port: 55000
     username: "wazuh"
-    password: "wazuh"
+    password: consored
 
 # Xpack Security
 kibana_xpack_security: false
 kibana_ssl_verification_mode: "full"
 
 elasticsearch_xpack_security_user: elastic
-elasticsearch_xpack_security_password: elastic_pass
+elasticsearch_xpack_security_password: consored
 
 node_certs_destination: /etc/kibana/certs
 

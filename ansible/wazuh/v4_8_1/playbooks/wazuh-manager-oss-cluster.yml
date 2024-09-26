@@ -24,7 +24,7 @@
               hidden: 'no'
         wazuh_api_users:
           - username: custom-user
-            password: SecretPassword1!
+            password: consored!
 
     - hosts: worker01
       roles:

@@ -20,7 +20,7 @@ filebeat_module_folder: /usr/share/filebeat/module/wazuh
 filebeat_xpack_security: false
 
 elasticsearch_xpack_security_user: elastic
-elasticsearch_xpack_security_password: elastic_pass
+elasticsearch_xpack_security_password: consored
 
 node_certs_destination: /etc/filebeat/certs
 
