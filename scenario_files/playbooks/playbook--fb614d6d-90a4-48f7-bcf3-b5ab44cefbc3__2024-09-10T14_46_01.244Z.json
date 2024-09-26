@@ -52,7 +52,7 @@
             "type": "user-auth",
             "name": "Domain admin",
             "username": "admin.project",
-            "password": "TNO_default_password12",
+            "password": "censored",
             "kms": false
         }
     },

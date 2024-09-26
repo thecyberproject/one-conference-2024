@@ -69,7 +69,7 @@
                 "type": "user-auth",
                 "name": "Domain admin",
                 "username": "tnoadmin",
-                "password": "TNO_default_password12",
+                "password": "censored",
                 "kms": false
             }
         },

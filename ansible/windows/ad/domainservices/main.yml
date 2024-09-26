@@ -1,7 +1,7 @@
 ---
-tld: "local"          # Only the extention so .nl would be nl, local is fine in most cases
-domain: "tnoproject"  # The domain you want, you don't need to own any domain names for this$
+tld: "local" # Only the extention so .nl would be nl, local is fine in most cases
+domain: "tnoproject" # The domain you want, you don't need to own any domain names for this$
 baseOu: "testproject" # The project OU all users and resourses will be put into this OU.
-default_password: "TNO_default_password12" # Default password for all users.
+default_password: "consored" # Default password for all users.
 ad_users: [] # custom users
 # nt4doamin: {{ domain|upper }}

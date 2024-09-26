@@ -7,7 +7,7 @@ module "soarca" {
   template_clone      = "ubuntu-server-22.04-cloud-init-template-csthv04"
   template_full_clone = true
   admin_username      = "ansible"
-  admin_password      = "vErYSecureOneConf"
+  admin_password      = "censored"
   ssh_empty           = false
 
   default_ci_cdrom_storage = var.proxmox_storage

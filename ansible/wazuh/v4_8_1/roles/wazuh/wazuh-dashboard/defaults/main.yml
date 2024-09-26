@@ -25,7 +25,7 @@ wazuh_api_credentials:
 
 # Dashboard Security
 dashboard_security: true
-indexer_admin_password: changeme
+indexer_admin_password: consored
 dashboard_user: kibanaserver
-dashboard_password: changeme
+dashboard_password: consored
 local_certs_path: "{{ playbook_dir }}/indexer/certificates"

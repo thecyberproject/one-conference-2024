@@ -38,17 +38,17 @@
           ip: 127.0.0.1
           role: indexer
       ansible_shell_allow_world_readable_temp: true
-      indexer_admin_password: He2px8YSh8xXF5rot587nyH%^7*LpNxD
-      indexer_security_password: He2px8YSh8xXF5rot587nyH%^7*LpNxD
+      indexer_admin_password: consored
+      indexer_security_password: consored
       wazuh_api_credentials:
           - id: default
             url: https://127.0.0.1
             port: 55000
             username: wazuh-wui
-            password: WKp%sZMoJVhF%2Mn2kaj^qmb9*b6@Kb%
+            password: consored
       wazuh_api_users:
         - username: wazuh-wui
-          password: WKp%sZMoJVhF%2Mn2kaj^qmb9*b6@Kb%
+          password: consored
       wazuh_manager_integrations:
         - name: custom-soarca
           hook_url: 'http://192.168.1.231:8080'

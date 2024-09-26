@@ -221,7 +221,7 @@ The hereunder example playbook uses the `wazuh-ansible` role to provision a prod
               hidden: 'no'
         wazuh_api_users:
           - username: custom-user
-            password: SecretPassword1!
+            password: consored!
         filebeat_output_indexer_hosts:
                 - "{{ hostvars.wi1.private_ip }}"
                 - "{{ hostvars.wi2.private_ip }}"
@@ -270,7 +270,7 @@ The hereunder example playbook uses the `wazuh-ansible` role to provision a prod
             url: https://{{ hostvars.manager.private_ip }}
             port: 55000
             username: custom-user
-            password: SecretPassword1!
+            password: consored!
         ansible_shell_allow_world_readable_temp: true
 ```
 
@@ -410,7 +410,7 @@ The hereunder example playbook uses the `wazuh-ansible` role to provision a Wazu
               hidden: 'no'
         wazuh_api_users:
           - username: custom-user
-            password: SecretPassword1!
+            password: consored!
 
     - hosts: worker01
       roles:

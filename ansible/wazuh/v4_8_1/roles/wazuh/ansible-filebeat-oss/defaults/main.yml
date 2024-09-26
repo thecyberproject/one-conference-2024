@@ -13,7 +13,7 @@ filebeat_module_package_path: /tmp/
 filebeat_module_destination: /usr/share/filebeat/module
 filebeat_module_folder: /usr/share/filebeat/module/wazuh
 indexer_security_user: admin
-indexer_security_password: changeme
+indexer_security_password: consored
 # Security plugin
 filebeat_security: true
 filebeat_ssl_dir: /etc/pki/filebeat
