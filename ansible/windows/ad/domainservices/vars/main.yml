@@ -1,0 +1,26 @@
+---
+domain_ou:
+  - Groups
+  - Computers
+  - Users
+  - Servers
+  - Admins
+
+domain_group:
+  - name: DomainAdminsOrg
+    display_name: "Domain Administrators TNO"
+  - name: FileshareRW
+    display_name: "File share group read/ write"
+
+default_users:
+  - Alan Turing
+  - Jonh von Neumann
+  - Oskar Morgenstern
+  - Edward Teller
+  - Marina Von Neumann
+  - Albert Einstein
+  - Isaac Newton
+  - Stephen Hawking
+
+default_admins:
+  - admin.user

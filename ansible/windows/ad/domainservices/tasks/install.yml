@@ -1,0 +1,24 @@
+---
+  - name: Wait 300 seconds, but only start checking after 60 seconds
+    ansible.builtin.wait_for_connection:
+      timeout: 300
+
+  - name: Create new domain in a new forest on the target host and reboot
+    microsoft.ad.domain:
+      dns_domain_name: "{{ domain }}.{{ tld }}"
+      safe_mode_password: "{{ default_password }}"
+      reboot: true
+
+  - name: Create new Windows domain in a new forest with specific parameters and reboot in post task
+    microsoft.ad.domain:
+      create_dns_delegation: false
+      database_path: C:\Windows\NTDS
+      dns_domain_name: "{{ domain }}.{{ tld }}"
+      domain_mode: Win2012R2
+      forest_mode: Win2012R2
+      safe_mode_password: "{{ default_password }}"
+    register: domain_install
+
+  - name: Reboot host if install requires it
+    ansible.windows.win_reboot:
+    when: domain_install.reboot_required  

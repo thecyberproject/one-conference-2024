@@ -1,0 +1,26 @@
+---
+- name: Enroll client to AD
+  hosts: clients_windows:server_windows
+  gather_facts: no
+  vars:
+    - tld: "local"          # Only the extention so .nl would be nl, local is fine in most cases
+    - domain: "projectdomain"  # The domain you want, you don't need to own any domain names for this$
+    - baseOu: "testproject" # The project OU all users and resourses will be put into this OU.
+    - default_password: "consored" # Default password for all users.
+
+
+  tasks:
+    - name: Set DNS server
+      ansible.windows.win_powershell:
+          script: Set-DnsClientServerAddress -InterfaceAlias "Ethernet*" -ServerAddresses ( "{{ item }}" )
+      with_inventory_hostnames:
+        - ad_windows
+      tags: ['enroll']
+
+    - microsoft.ad.membership:
+        dns_domain_name: "{{ domain }}.{{ tld }}"
+        domain_admin_user: "{{domain|upper}}\\admin.user"
+        domain_admin_password: "{{default_password}}"
+        domain_ou_path: "OU=Computers,OU={{baseOu}},DC={{domain}},DC={{tld}}"
+        state: domain
+        reboot: true

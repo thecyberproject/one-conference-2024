@@ -1,0 +1,71 @@
+{
+    "__user__": {
+        "type": "string",
+        "constant": false,
+        "external": true,
+        "value": "alan.turing"
+    },
+    "__path__": {
+        "type": "string",
+        "constant": false,
+        "external": true,
+        "value": "C:\\Users\\alan.turing\\Documents\\test.txt"
+    },
+    "__rule_id__": {
+        "type": "integer",
+        "constant": false,
+        "external": true
+    },
+    "__rule_level__": {
+        "type": "integer",
+        "constant": false,
+        "external": true
+    },
+    "__times_fired__": {
+        "type": "integer",
+        "constant": false,
+        "external": true
+    },
+    "__affected_agent_name__": {
+        "type": "string",
+        "constant": false,
+        "external": true,
+        "value": "WIN-83UPVCUR"
+    },
+    "__affected_agent_ip__": {
+        "type": "ipv4-addr",
+        "constant": false,
+        "external": true,
+        "value": "192.168.1.124"
+    },
+    "__full_log_message__": {
+        "type": "string",
+        "constant": false,
+        "external": true,
+        "value": "Full log"
+    },
+    "__source_net__": {
+        "type": "string",
+        "constant": true,
+        "external": true,
+        "value": "192.168.1.0/24"
+    },
+    "__target_net__": {
+        "type": "string",
+        "constant": true,
+        "external": true,
+        "value": "any"
+    },
+    "__opnsense_user__": {
+        "type": "string",
+        "constant": true,
+        "external": true,
+        "value": "user-key"
+    },
+    "__opnsense_key__": {
+        "type": "string",
+        "constant": true,
+        "external": true,
+        "value": "secret"
+    }
+}

@@ -1,0 +1,18 @@
+---
+- name: Wait 300 seconds
+  ansible.builtin.wait_for_connection:
+    timeout: 300
+
+- name: Create folder
+  ansible.windows.win_file:
+    path: C:\share\
+    state: directory
+
+- name: Add public company share
+  ansible.windows.win_share:
+    name: share
+    description: Company share
+    path: C:\share\
+    list: true
+    full: DomainAdminsOrg
+    change: FileshareRW

@@ -1,0 +1,9 @@
+---
+- name: Reboot
+  hosts: ad_windows
+
+  tasks:
+
+    - name: Reboot
+      win_reboot:
+        msg: "Reboot automatically"     

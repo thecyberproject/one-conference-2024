@@ -1,0 +1,89 @@
+    {
+        "type": "playbook",
+        "spec_version": "cacao-2.0",
+        "id": "playbook--a846b6cf-4324-4b34-b366-0bf99661f330",
+        "name": "Remove file from endpoint",
+        "description": "Remove file from Windows endpoint",
+        "created_by": "identity--64f88f4f-cb0f-445f-ad9a-6563427e03cb",
+        "created": "2024-09-10T12:06:00.554Z",
+        "modified": "2024-09-10T12:06:00.554Z",
+        "revoked": false,
+        "derived_from": [
+            "playbook--001ce4de-f74d-4ea8-962c-8a7f900ccad7"
+        ],
+        "playbook_variables": {
+            "__path__": {
+                "type": "string",
+                "constant": false,
+                "external": true
+            },
+            "__soarca_powershell_error__": {
+                "type": "string",
+                "constant": false,
+                "external": true
+            },
+            "__soarca_powershell_result__": {
+                "type": "string",
+                "constant": false,
+                "external": true
+            }
+        },
+        "workflow_start": "start--b1d99034-3d1f-457b-98ba-ad802f02e33c",
+        "workflow": {
+            "start--b1d99034-3d1f-457b-98ba-ad802f02e33c": {
+                "on_completion": "action--d47fc520-28e9-4587-a762-aa51d9018433",
+                "type": "start"
+            },
+            "action--d47fc520-28e9-4587-a762-aa51d9018433": {
+                "name": "Remove file",
+                "on_completion": "end--70c75819-0c7b-43bf-9cd9-52ce7aa23082",
+                "type": "action",
+                "commands": [
+                    {
+                        "type": "powershell",
+                        "description": "Remove file at specified path",
+                        "command": "Remove-Item __path__:value"
+                    }
+                ],
+                "agent": "soarca--4615c8e9-b46c-4172-8127-43285d172c7f",
+                "targets": [
+                    "net-address--13b02c9e-c9f9-4758-a361-c0a3c1b14b3e"
+                ],
+                "out_args": [
+                    "__soarca_powershell_result__",
+                    "__soarca_powershell_error__"
+                ]
+            },
+            "end--70c75819-0c7b-43bf-9cd9-52ce7aa23082": {
+                "type": "end"
+            }
+        },
+        "agent_definitions": {
+            "soarca--4615c8e9-b46c-4172-8127-43285d172c7f": {
+                "type": "soarca",
+                "name": "soarca-powershell"
+            }
+        },
+        "authentication_info_definitions": {
+            "authentication-info--9a2d2fd6-aa6d-4d2e-ad2a-f6f84d544dbc": {
+                "type": "user-auth",
+                "name": "Domain admin",
+                "username": "admin.user",
+                "password": "censored",
+                "kms": false
+            }
+        },
+        "target_definitions": {
+            "net-address--13b02c9e-c9f9-4758-a361-c0a3c1b14b3e": {
+                "type": "net-address",
+                "name": "Windows system",
+                "address": {
+                    "ipv4": [
+                        "192.168.1.124"
+                    ]
+                },
+                "port": "5985",
+                "authentication_info": "authentication-info--9a2d2fd6-aa6d-4d2e-ad2a-f6f84d544dbc"
+            }
+        }
+    }

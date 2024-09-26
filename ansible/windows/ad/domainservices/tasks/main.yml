@@ -1,0 +1,13 @@
+---
+  - name: Include vars
+    include_vars: ../vars/main.yml
+    include_vars: ../main.yml
+
+
+  - name: Install domain controller role and reboot.
+    include_tasks: install.yml
+    tags: ['install']
+
+  - name: Populate and configure doamin controller
+    include_tasks: configure.yml
+    tags: ['configure']
